@@ -7,86 +7,69 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>HS Physics</h1>
-      <p class="tagline">Full-year high school physics companion</p>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="../index.html">Home</a>
-      <a href="measurement.html">1. Measurement</a>
-      <a href="kinematics.html">2. Kinematics</a>
-      <a href="dynamics.html">3. Dynamics</a>
-      <a href="energy.html" class="active">4. Energy</a>
-      <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular</a>
-      <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves</a>
-      <a href="electrostatics.html">9. Electrostatics</a>
-      <a href="circuits.html">10. Circuits</a>
-      <a href="magnetism.html">11. Magnetism</a>
-      <a href="optics.html">12. Optics</a>
-      <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formulas</a>
-    </div>
-  </nav>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html" class="active">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+  </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Work, Energy & Power</h2>
-      <p>Energy is the capacity to do work. Work transfers energy. Power is the rate of that transfer.</p>
+      <p>Work transfers energy. Mechanical energy can be conserved. Power is the rate of transfer. Choose energy methods when forces are unknown or path details are messy.</p>
     </div>
 
     <article class="concept">
       <h3>Work</h3>
-      <div class="explain" data-levels='["Work happens when a force makes something move in the direction of that force. Push a box and it slides — you did work. Push and nothing moves — zero work.","Work by a constant force is W = Fd cosθ, where θ is the angle between force and displacement. Only the parallel component does work. Unit: joule (J). Work can be positive or negative.","Infinitesimal work is dW = F · dr. For a finite path the work is the line integral ∫ F · dr. When force is constant this reduces to W = F · Δr. Work is a scalar equal to the energy transferred by the force across the system boundary."]'>
+      <div class="explain" data-levels='["Work is done when a force makes something move in the direction of that force. No movement in the force’s direction means zero work.","W = Fd cosθ for a constant force. Only the component of force along the displacement does work. Unit: joule (J). Positive work adds energy; negative work removes energy.","Work is the line integral W = ∫ F · dr. For constant F it reduces to F · Δr. Work is frame-dependent and path-dependent when non-conservative forces act; it equals the energy transferred by that force across the system boundary."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>W = Fd cosθ</code>
         <code>W = ∫ F · dr</code>
       </div>
+      <div class="mistakes"><h4>Common mistakes</h4><p>• Thinking any force on a moving object does work (centripetal force does zero work because it is perpendicular to velocity).<br>• Forgetting cosθ when force and displacement are not parallel.<br>• Using distance instead of displacement when the force is constant in direction.</p></div>
     </article>
 
     <article class="concept">
-      <h3>Kinetic Energy</h3>
-      <div class="explain" data-levels='["Kinetic energy is the energy something has because it is moving. Faster or heavier means more kinetic energy.","KE = ½mv². It is always positive and depends on the square of speed. The work–energy theorem states that net work equals the change in kinetic energy: W_net = ΔKE.","Kinetic energy of a particle is ½mv², obtained by integrating F = ma along the trajectory. For a system of particles it separates into center-of-mass and relative contributions."]'>
+      <h3>Kinetic Energy and the Work–Energy Theorem</h3>
+      <div class="explain" data-levels='["Kinetic energy is energy of motion. The net work done on an object equals the change in its kinetic energy.","KE = ½mv². Work–energy theorem: W_net = ΔKE = KE_f − KE_i. This holds even when forces are not constant, as long as you use the net work.","The work–energy theorem is the integral of Newton’s second law along the trajectory. It is always true for a particle; for systems one must carefully define which work and which kinetic energy (CM vs relative)."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>KE = ½mv²</code>
         <code>W_net = ΔKE</code>
       </div>
+      <div class="example"><h4>Example</h4><p>A 2.0 kg object speeds from 3.0 m/s to 7.0 m/s. ΔKE = ½(2)(49 − 9) = 40 J. Net work done on it is 40 J.</p></div>
     </article>
 
     <article class="concept">
       <h3>Potential Energy</h3>
-      <div class="explain" data-levels='["Potential energy is stored energy waiting to become motion. A book on a high shelf has gravitational potential energy; a stretched spring has elastic potential energy.","Near Earth, PE_g = mgh. For a spring, PE_s = ½kx². Potential energy is defined only for conservative forces and depends on the configuration of the system.","A force is conservative if its work is path-independent (equivalently ∇ × F = 0). Then a scalar potential U exists with F = −∇U. Only differences in potential energy are physically meaningful."]'>
+      <div class="explain" data-levels='["Potential energy is stored energy that depends on position or configuration. Gravity and springs are the usual sources in mechanics.","Near Earth PE_g = mgh (choose a zero level). Spring PE_s = ½kx². Potential energy is defined only for conservative forces. Changing the zero of PE does not change physics — only differences matter.","A force is conservative if ∮ F · dr = 0 for every closed path (equivalently ∇ × F = 0). Then F = −∇U. Absolute U is arbitrary; measurable quantities depend only on ΔU."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>PE_g = mgh</code>
         <code>PE_s = ½kx²</code>
       </div>
+      <div class="note"><h4>Tip</h4><p>Set PE = 0 at the lowest point or at the spring’s equilibrium — whichever simplifies the algebra. Consistency within one problem is what matters.</p></div>
     </article>
 
     <article class="concept">
       <h3>Conservation of Mechanical Energy</h3>
-      <div class="explain" data-levels='["If friction and other lossy forces are absent, kinetic plus potential energy stays constant. Energy just changes form — high and slow becomes low and fast.","When only conservative forces do work, mechanical energy is conserved: KEᵢ + PEᵢ = KE_f + PE_f. Non-conservative work changes mechanical energy: W_nc = ΔME.","In a closed system subject only to conservative internal forces, total mechanical energy E = T + U is a constant of the motion. Non-conservative work equals the change in mechanical energy."]'>
+      <div class="explain" data-levels='["If friction and other “lossy” forces are absent, kinetic + potential stays constant. Energy just changes form.","When only conservative forces do work: KEᵢ + PEᵢ = KE_f + PE_f. If non-conservative work is present: W_nc = ΔME = (KE_f + PE_f) − (KEᵢ + PEᵢ).","Mechanical energy is conserved when the net work by non-conservative forces is zero. More generally W_nc = ΔE_mech. This is an integral consequence of Newton’s laws for time-independent potentials."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>KEᵢ + PEᵢ = KE_f + PE_f</code>
+        <code>KEᵢ + PEᵢ = KE_f + PE_f &nbsp;&nbsp; (conservative)</code>
         <code>W_nc = Δ(KE + PE)</code>
       </div>
+      <div class="example"><h4>Example</h4><p>Block slides down a frictionless ramp from height h. At bottom: mgh = ½mv² ⇒ v = √(2gh). Mass cancels. With friction, W_friction = ΔME is negative and final speed is smaller.</p></div>
+      <div class="note"><h4>When to use energy</h4><p>Prefer energy methods when: you care about speeds at different heights, forces are unknown (normal, tension that do no work), or the path is complicated but only endpoints matter.</p></div>
     </article>
 
     <article class="concept">
       <h3>Power</h3>
-      <div class="explain" data-levels='["Power is how fast you do work or use energy. A more powerful engine does the same work in less time.","Average power P = W/Δt. Instantaneous power P = F·v. Unit: watt (W) = J/s.","Power is the time derivative of work: P = dW/dt. For a force acting on a moving point it is the scalar product F · v."]'>
+      <div class="explain" data-levels='["Power is how fast work is done or energy is transferred. Same work in half the time means double the power.","Average power P = W/Δt = ΔE/Δt. Instantaneous P = F·v. Unit: watt (W) = J/s. Horsepower is sometimes used (1 hp ≈ 746 W).","Power is the time derivative of work (or energy transfer rate). For a force on a moving point, P = F · v. In circuits the same idea appears as P = IV."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
@@ -94,8 +77,20 @@
         <code>P = Fv cosθ</code>
       </div>
     </article>
-  </main>
 
+    <article class="concept">
+      <h3>Energy Problem Checklist</h3>
+      <div class="note">
+        <h4>Steps</h4>
+        <p>1. Identify the system and whether friction/drag does work.<br>
+2. Choose PE = 0 location.<br>
+3. Write KE and PE at initial and final states.<br>
+4. If conservative: KEᵢ + PEᵢ = KE_f + PE_f.<br>
+5. If not: add W_nc on the appropriate side.<br>
+6. Solve symbolically; check units and limits (e.g. h → 0 ⇒ v → 0).</p>
+      </div>
+    </article>
+  </main>
   <footer><div class="container">HS Physics — Energy</div></footer>
   <script src="../js/explain.js"></script>
 </body>

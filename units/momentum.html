@@ -7,75 +7,62 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>HS Physics</h1>
-      <p class="tagline">Full-year high school physics companion</p>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="../index.html">Home</a>
-      <a href="measurement.html">1. Measurement</a>
-      <a href="kinematics.html">2. Kinematics</a>
-      <a href="dynamics.html">3. Dynamics</a>
-      <a href="energy.html">4. Energy</a>
-      <a href="momentum.html" class="active">5. Momentum</a>
-      <a href="circular.html">6. Circular</a>
-      <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves</a>
-      <a href="electrostatics.html">9. Electrostatics</a>
-      <a href="circuits.html">10. Circuits</a>
-      <a href="magnetism.html">11. Magnetism</a>
-      <a href="optics.html">12. Optics</a>
-      <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formulas</a>
-    </div>
-  </nav>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html" class="active">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+  </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Momentum & Collisions</h2>
-      <p>Momentum is mass in motion. It is conserved in isolated systems and is the key to analyzing collisions and explosions.</p>
+      <p>Momentum is conserved in isolated systems. Impulse links force and time to Δp. Collisions are classified by whether kinetic energy is conserved.</p>
     </div>
 
     <article class="concept">
       <h3>Linear Momentum</h3>
-      <div class="explain" data-levels='["Momentum tells how hard it is to stop something. A heavy truck moving slowly can have the same momentum as a light car moving fast.","Momentum p = mv is a vector in the direction of velocity. Unit: kg·m/s. Direction matters; opposite directions can cancel.","Linear momentum of a particle is p = mv. For a system it equals M v_cm. It is conserved when the net external force vanishes."]'>
+      <div class="explain" data-levels='["Momentum measures how hard it is to stop something. Heavy and slow can match light and fast.","p = mv is a vector. Unit: kg·m/s. Total momentum of a system is the vector sum of individual momenta.","p = mv for a particle; for a system P = M v_cm. Momentum is the generator of spatial translations and is conserved when net external force vanishes."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas"><code>p = mv</code></div>
     </article>
 
     <article class="concept">
-      <h3>Impulse</h3>
-      <div class="explain" data-levels='["Impulse is a force applied over a stretch of time. A large force for a short time or a smaller force for a longer time can produce the same change in momentum.","Impulse J = F_avg Δt = Δp. The impulse–momentum theorem links force and time to the change in momentum. Area under an F-versus-t graph equals impulse.","Impulse is the time integral of force, J = ∫ F dt, and equals the change in momentum by integration of Newton’s second law. It is especially useful for large, brief forces."]'>
+      <h3>Impulse–Momentum Theorem</h3>
+      <div class="explain" data-levels='["A force applied over time changes momentum. Same impulse can come from a large force briefly or a smaller force for longer.","J = F_avg Δt = Δp. Area under an F-versus-t graph equals impulse. Softening a collision (airbags, bending knees) increases Δt and reduces peak force for the same Δp.","Impulse J = ∫ F dt equals the change in momentum by direct integration of ΣF = dp/dt. Useful when forces are large and brief so the detailed time dependence is unknown."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas"><code>J = FΔt = Δp</code></div>
+      <div class="example"><h4>Example</h4><p>A 0.15 kg baseball going 40 m/s is stopped in 0.020 s. Δp = 6.0 kg·m/s. Average force = Δp/Δt = 300 N.</p></div>
     </article>
 
     <article class="concept">
       <h3>Conservation of Momentum</h3>
-      <div class="explain" data-levels='["In a closed system with no outside pushes or pulls, total momentum before an event equals total momentum after. Momentum is only shared or rearranged.","When net external force on a system is zero, total momentum is conserved: Σpᵢ = Σp_f. This holds for collisions and explosions in isolated systems. Internal forces cancel by Newton’s third law.","If the net external force vanishes, total linear momentum is a constant of the motion. This follows from dP/dt = ΣF_ext. In the center-of-mass frame total momentum is zero before and after any internal interaction."]'>
+      <div class="explain" data-levels='["In a closed system with no outside net force, total momentum before equals total momentum after. Momentum is only rearranged.","If ΣF_ext = 0 then Σpᵢ = Σp_f. True for collisions and explosions in isolated systems. Internal forces cancel by Newton’s third law.","dP/dt = ΣF_ext. When external force is zero (or negligible during a short collision), total momentum is constant. In the CM frame total momentum is always zero."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-      <div class="formulas"><code>Σ m vᵢ = Σ m v_f</code></div>
+      <div class="formulas"><code>Σ m vᵢ = Σ m v_f &nbsp;&nbsp; (isolated)</code></div>
+      <div class="note"><h4>Strategy</h4><p>During a collision, external forces (gravity, normal) often impulse much less than the huge internal collision forces. Treat the system as isolated for the collision instant, then use energy or kinematics before/after if needed.</p></div>
     </article>
 
     <article class="concept">
-      <h3>Elastic and Inelastic Collisions</h3>
-      <div class="explain" data-levels='["In an elastic collision objects bounce without losing bounce energy. In an inelastic collision some energy turns into heat, sound, or deformation. Perfectly inelastic means they stick together.","Elastic: both momentum and kinetic energy conserved. Inelastic: momentum conserved, kinetic energy not. Perfectly inelastic: objects share a common final velocity and lose the maximum possible kinetic energy.","A collision is elastic if total kinetic energy is unchanged; otherwise inelastic. The coefficient of restitution quantifies elasticity (e = 1 elastic, e = 0 perfectly inelastic). Momentum conservation always holds for the isolated system."]'>
+      <h3>Elastic vs Inelastic Collisions</h3>
+      <div class="explain" data-levels='["Elastic: objects bounce and no kinetic energy is lost. Inelastic: some KE becomes heat, sound, or deformation. Perfectly inelastic: objects stick together.","Elastic: p and KE both conserved. Inelastic: only p conserved. Perfectly inelastic: common final velocity; maximum KE loss. Always start with momentum; check KE only if told elastic.","Coefficient of restitution e = relative speed after / relative speed before (along the line of impact). e = 1 elastic, e = 0 perfectly inelastic. Momentum conservation plus e determines 1D collision outcomes."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>Elastic: KE and p both conserved</code>
         <code>Perfectly inelastic: m₁v₁ + m₂v₂ = (m₁+m₂)v_f</code>
+        <code>Elastic 1D (equal mass): velocities exchange</code>
+      </div>
+      <div class="mistakes"><h4>Common mistakes</h4><p>• Using KE conservation when the collision is not elastic.<br>• Forgetting that momentum is a vector — directions (signs) matter.<br>• Applying “velocities exchange” when masses are unequal.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Explosions and Recoil</h3>
+      <div class="explain" data-levels='["An explosion is like a reverse perfectly inelastic collision: one object becomes two or more. Total momentum stays the same as before the explosion.","If a system is at rest before an explosion, total momentum after is still zero: the pieces go in directions that cancel vectorially. Recoil of a gun is the same idea.","Internal energy (chemical, elastic) converts to kinetic energy of the fragments. Momentum conservation still holds if external impulse is negligible; energy conservation does not hold for mechanical energy alone."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
     </article>
   </main>
-
   <footer><div class="container">HS Physics — Momentum</div></footer>
   <script src="../js/explain.js"></script>
 </body>

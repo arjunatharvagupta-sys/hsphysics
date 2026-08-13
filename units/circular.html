@@ -9,61 +9,69 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a>
-    <a href="measurement.html">1. Measurement</a>
-    <a href="kinematics.html">2. Kinematics</a>
-    <a href="dynamics.html">3. Dynamics</a>
-    <a href="energy.html">4. Energy</a>
-    <a href="momentum.html">5. Momentum</a>
-    <a href="circular.html" class="active">6. Circular</a>
-    <a href="rotation.html">7. Rotation</a>
-    <a href="waves.html">8. Waves</a>
-    <a href="electrostatics.html">9. Electrostatics</a>
-    <a href="circuits.html">10. Circuits</a>
-    <a href="magnetism.html">11. Magnetism</a>
-    <a href="optics.html">12. Optics</a>
-    <a href="modern.html">13. Modern</a>
-    <a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html" class="active">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Circular Motion & Gravity</h2>
-      <p>Moving in circles requires a center-pointing force. Gravity supplies that force for planets and satellites.</p>
+      <p>Centripetal acceleration, the real forces that provide it, orbital motion, and universal gravitation.</p>
     </div>
 
     <article class="concept">
-      <h3>Uniform Circular Motion</h3>
-      <div class="explain" data-levels='["Even at constant speed, direction keeps changing in a circle. Changing direction means acceleration — always toward the center.","Speed is constant but velocity is not because direction changes. Centripetal acceleration a_c = v²/r points toward the center. The required net force is F_c = mv²/r.","Uniform circular motion has constant angular speed and radius. Velocity is tangential; acceleration is purely radial, a = −ω²r. Centripetal force is simply the net radial component of the real forces present."]'>
+      <h3>Centripetal Acceleration and Force</h3>
+      <div class="explain" data-levels='["Moving in a circle means direction is always changing, so there is always acceleration toward the center — even at constant speed. Something has to pull or push toward the center.","a_c = v²/r = ω²r toward the center. Net force toward the center is F_c = mv²/r. “Centripetal force” is not a new kind of force; it is the net radial force supplied by tension, gravity, friction, normal force, etc.","In polar coordinates the radial acceleration is ẍ_r − rθ̇². For uniform circular motion ẍ_r = 0 and a_r = −v²/r. The force providing this acceleration is whatever real force has a radial component; there is no separate centripetal force entity."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>a_c = v²/r = ω²r</code>
         <code>F_c = mv²/r</code>
-        <code>v = 2πr/T</code>
+        <code>v = 2πr/T &nbsp;&nbsp; ω = 2π/T</code>
+      </div>
+      <div class="mistakes"><h4>Common misconception</h4><p>Drawing a “centripetal force” arrow in addition to tension/gravity/friction on a free-body diagram. Identify the real forces; their radial component is the centripetal force.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Horizontal Circles and Banked Curves</h3>
+      <div class="explain" data-levels='["A car on a flat curve needs friction toward the center. On a banked curve the normal force has a horizontal component that helps provide the centripetal requirement.","Flat curve: f_s provides mv²/r (maximum μₛN = μₛmg). Banked curve with no friction: N sinθ = mv²/r and N cosθ = mg ⇒ v = √(rg tanθ). With friction the safe speed range widens.","Design speed of a banked curve follows from resolving N into horizontal and vertical components and setting horizontal = mv²/r with vertical balancing weight. Friction adds or subtracts from the horizontal component depending on whether the car is too fast or too slow."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>v = √(rg tanθ) &nbsp;&nbsp; (banked, no friction)</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Vertical Circles</h3>
+      <div class="explain" data-levels='["At the top of a vertical loop you need enough speed so that gravity plus any normal/tension can supply the centripetal force. At the bottom the normal force is larger than weight.","Top (critical): mg + N = mv²/r; minimum speed when N = 0 gives v = √(gr). Bottom: N − mg = mv²/r ⇒ N = mg + mv²/r. Energy links speed at top and bottom.","Radial equation at each point: ΣF_radial = mv²/r. Energy conservation relates v at different heights. The critical point is usually the top, where gravity already contributes to the required centripetal force."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>v_min (top) = √(gr)</code>
       </div>
     </article>
 
     <article class="concept">
       <h3>Universal Gravitation</h3>
-      <div class="explain" data-levels='["Every piece of matter pulls on every other piece. Bigger masses and smaller distances mean a stronger pull. That is why we stick to Earth and the Moon stays in orbit.","F_g = G m₁ m₂ / r² with G = 6.67 × 10⁻¹¹ N·m²/kg². The force is always attractive and acts along the line joining the centers.","Newton’s law states that every particle attracts every other with a force proportional to the product of masses and inversely proportional to the square of separation. The field is conservative with potential Φ = −GM/r."]'>
+      <div class="explain" data-levels='["Every mass attracts every other mass. Stronger for larger masses and closer distances — inverse square law.","F_g = G m₁ m₂ / r² with G = 6.67 × 10⁻¹¹ N·m²/kg². Weight near Earth is approximately GMm/R² = mg, so g = GM/R².","Newton’s inverse-square law is the weak-field limit of general relativity. The field is conservative with potential Φ = −GM/r. Superposition holds for multiple point masses."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>F_g = G m₁ m₂ / r²</code>
-        <code>G = 6.67 × 10⁻¹¹ N·m²/kg²</code>
+        <code>g = GM / R²</code>
       </div>
     </article>
 
     <article class="concept">
-      <h3>Orbits</h3>
-      <div class="explain" data-levels='["Satellites are continuously falling toward the body they orbit but moving sideways fast enough that they keep missing it. That combination produces a closed path.","For a circular orbit gravity supplies the centripetal force: GMm/r² = mv²/r → v = √(GM/r). Kepler’s third law: T² ∝ r³.","Equating gravitational and centripetal force yields orbital speed. Kepler’s third law follows: T² = (4π²/GM)r³. Bound orbits under an inverse-square force are ellipses with the central mass at one focus."]'>
+      <h3>Orbits and Kepler</h3>
+      <div class="explain" data-levels='["Orbiting is continuous free fall with enough sideways speed to keep missing the surface. Higher orbits are slower and have longer periods.","Circular orbit: GMm/r² = mv²/r ⇒ v = √(GM/r). Period: T² = (4π²/GM) r³ (Kepler’s third law for circles). Total energy is negative for bound orbits.","Kepler’s laws follow from the inverse-square central force: orbits are conic sections (1st), equal areas in equal times from angular-momentum conservation (2nd), and T² ∝ a³ (3rd). Energy E = −GMm/(2a) for ellipses."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>v_orbit = √(GM/r)</code>
         <code>T² = (4π²/GM) r³</code>
       </div>
+      <div class="note"><h4>Tip</h4><p>Escape speed from the surface is √(2GM/R) = √(2gR). It is √2 times circular-orbit speed at the surface.</p></div>
     </article>
   </main>
   <footer><div class="container">HS Physics — Circular Motion</div></footer>

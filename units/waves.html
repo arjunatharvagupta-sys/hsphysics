@@ -9,39 +9,18 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a>
-    <a href="measurement.html">1. Measurement</a>
-    <a href="kinematics.html">2. Kinematics</a>
-    <a href="dynamics.html">3. Dynamics</a>
-    <a href="energy.html">4. Energy</a>
-    <a href="momentum.html">5. Momentum</a>
-    <a href="circular.html">6. Circular</a>
-    <a href="rotation.html">7. Rotation</a>
-    <a href="waves.html" class="active">8. Waves</a>
-    <a href="electrostatics.html">9. Electrostatics</a>
-    <a href="circuits.html">10. Circuits</a>
-    <a href="magnetism.html">11. Magnetism</a>
-    <a href="optics.html">12. Optics</a>
-    <a href="modern.html">13. Modern</a>
-    <a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html" class="active">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Waves & Sound</h2>
-      <p>How energy travels through oscillations — wavelength, frequency, interference, and sound.</p>
+      <p>Wave properties, superposition, standing waves, sound, Doppler, and intensity.</p>
     </div>
 
     <article class="concept">
-      <h3>What is a Wave?</h3>
-      <div class="explain" data-levels='["A wave is a traveling disturbance that carries energy without permanently moving the material. A ripple on a pond: water mostly goes up and down while the ripple moves outward.","A wave is a periodic disturbance that transfers energy through a medium or space. Mechanical waves need a medium; electromagnetic waves do not. Transverse waves oscillate perpendicular to travel; longitudinal waves oscillate parallel to it.","A wave is a solution of a hyperbolic PDE (the wave equation) that propagates a field disturbance through space and time. Mechanical waves solve continuum equations of a medium; electromagnetic waves solve Maxwell’s equations."]'>
-        <p></p><button class="hit" aria-label="Cycle explanation"></button>
-      </div>
-    </article>
-
-    <article class="concept">
-      <h3>Wave Properties</h3>
-      <div class="explain" data-levels='["Wavelength is the length of one full wiggle. Frequency is how many wiggles pass each second. Amplitude is how tall the wiggle is. Wave speed is how fast the pattern travels.","λ = distance between successive crests. f = cycles per second. T = 1/f. Amplitude A = maximum displacement. Wave speed v = fλ.","A monochromatic traveling wave is y(x,t) = A cos(kx − ωt + φ) with k = 2π/λ and ω = 2πf. Phase speed v = ω/k = fλ. Energy density scales with amplitude squared."]'>
+      <h3>Wave Basics</h3>
+      <div class="explain" data-levels='["A wave carries energy through a repeating disturbance. The material mostly oscillates in place while the pattern travels.","Mechanical waves need a medium; EM waves do not. Transverse: oscillation ⊥ travel. Longitudinal: oscillation ∥ travel. v = fλ, T = 1/f.","Waves are solutions of a wave equation. Energy flux scales with amplitude squared. Phase speed v = ω/k; group speed can differ in dispersive media."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
@@ -51,25 +30,45 @@
     </article>
 
     <article class="concept">
-      <h3>Interference and Standing Waves</h3>
-      <div class="explain" data-levels='["When two waves meet their heights add. Crests together make a bigger wave; crest meets trough and they cancel. Standing waves are the patterns that stay put when waves bounce back and forth.","Superposition: net displacement is the sum of individual displacements. Constructive interference when path difference = mλ; destructive when = (m+½)λ. Standing waves on a string fixed at both ends: λ = 2L/n, f_n = nv/(2L).","Linearity of the wave equation implies superposition. Boundary conditions quantize allowed modes, producing discrete eigenfrequencies. Nodes are permanent destructive interference; antinodes permanent constructive interference."]'>
+      <h3>Speed on a String</h3>
+      <div class="explain" data-levels='["On a tighter or lighter string, waves travel faster.","v = √(T/μ) where T is tension and μ is linear mass density (mass per unit length). Higher tension or smaller μ → higher speed.","The wave speed on a string follows from the transverse wave equation derived via Newton’s laws on a small string element. v = √(T/μ) assumes small amplitude and no stiffness."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-      <div class="formulas">
-        <code>f_n = n v / (2L)</code>
-        <code>λ_n = 2L / n</code>
-      </div>
+      <div class="formulas"><code>v = √(T/μ)</code></div>
     </article>
 
     <article class="concept">
-      <h3>Sound</h3>
-      <div class="explain" data-levels='["Sound is a longitudinal wave of pressure variations traveling through air. Higher frequency means higher pitch; larger amplitude means louder sound.","Sound is a longitudinal mechanical wave. Speed in air at 20 °C ≈ 343 m/s. Intensity I ∝ A². Decibel level β = 10 log(I/I₀). Doppler effect shifts frequency when source or observer moves.","Sound waves are adiabatic compressional disturbances. Speed c = √(B/ρ). Doppler formula follows from phase invariance under relative motion of source, observer, and medium."]'>
+      <h3>Interference and Standing Waves</h3>
+      <div class="explain" data-levels='["Waves add. Crest on crest builds up; crest on trough cancels. Standing waves are fixed patterns of nodes and antinodes on a string or in a tube.","Constructive: path difference mλ. Destructive: (m+½)λ. String fixed at both ends: λ_n = 2L/n, f_n = n v/(2L). Pipe closed at one end: odd harmonics only, f = nv/(4L) with n odd.","Boundary conditions quantize allowed wavelengths. Nodes are zeros of the standing-wave eigenfunctions; antinodes are maxima. A closed pipe end is a pressure antinode (displacement node)."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>String: f_n = n v / (2L)</code>
+        <code>Closed pipe: f = n v / (4L) &nbsp; (n odd)</code>
+      </div>
+      <div class="mistakes"><h4>Common mistake</h4><p>Using the same harmonic formula for open and closed pipes. Closed-open pipes support only odd harmonics.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Sound and Intensity</h3>
+      <div class="explain" data-levels='["Sound is a longitudinal pressure wave. Louder means larger amplitude; higher pitch means higher frequency.","Speed in air ≈ 343 m/s at 20 °C. Intensity I is power per area. Decibel level β = 10 log(I/I₀) with I₀ = 10⁻¹² W/m². +10 dB ≈ 10× intensity.","Sound speed c = √(γP/ρ) for an ideal gas. Intensity for a spherical source falls as 1/r² in free space. The decibel scale is logarithmic because human hearing is roughly logarithmic in intensity."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>v_sound ≈ 343 m/s</code>
         <code>β = 10 log(I/I₀)</code>
       </div>
+    </article>
+
+    <article class="concept">
+      <h3>Doppler Effect</h3>
+      <div class="explain" data-levels='["When a sound source or listener moves, the heard frequency changes. Source approaching → higher pitch; source leaving → lower pitch.","f' = f (v ± v_o)/(v ± v_s). Use top signs when motion is toward the other party. Observer motion and source motion enter differently.","Doppler shift for sound is asymmetric in source vs observer motion because sound has a medium. Light in vacuum is symmetric and uses a relativistic formula."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>f' = f (v ± v_o) / (v ± v_s)</code>
+      </div>
+      <div class="note"><h4>Tip</h4><p>Numerator: observer. Denominator: source. Toward → sign that raises f'; away → sign that lowers f.</p></div>
     </article>
 
     <article class="concept">
@@ -87,25 +86,10 @@
   <footer><div class="container">HS Physics — Waves</div></footer>
   <script src="../js/explain.js"></script>
   <script>
-    const canvas = document.getElementById('waveCanvas');
-    const ctx = canvas.getContext('2d');
-    const freqSl = document.getElementById('freq');
-    const ampSl = document.getElementById('amp');
-    let t = 0;
-    function drawWave() {
-      ctx.fillStyle = '#080c10';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      const f = parseFloat(freqSl.value), A = parseFloat(ampSl.value), k = 0.045;
-      ctx.beginPath(); ctx.strokeStyle = '#5eb8f0'; ctx.lineWidth = 2;
-      for (let x = 0; x < canvas.width; x++) {
-        const y = canvas.height/2 + A * Math.sin(k*x - 2*Math.PI*f*t);
-        x === 0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
-      }
-      ctx.stroke(); t += 0.03; requestAnimationFrame(drawWave);
-    }
-    freqSl.oninput = () => document.getElementById('freqval').textContent = freqSl.value;
-    ampSl.oninput = () => document.getElementById('ampval').textContent = ampSl.value;
-    drawWave();
+    const canvas=document.getElementById('waveCanvas'),ctx=canvas.getContext('2d');
+    const freqSl=document.getElementById('freq'),ampSl=document.getElementById('amp');let t=0;
+    function drawWave(){ctx.fillStyle='#080c10';ctx.fillRect(0,0,canvas.width,canvas.height);const f=parseFloat(freqSl.value),A=parseFloat(ampSl.value),k=0.045;ctx.beginPath();ctx.strokeStyle='#5eb8f0';ctx.lineWidth=2;for(let x=0;x<canvas.width;x++){const y=canvas.height/2+A*Math.sin(k*x-2*Math.PI*f*t);x===0?ctx.moveTo(x,y):ctx.lineTo(x,y)}ctx.stroke();t+=0.03;requestAnimationFrame(drawWave)}
+    freqSl.oninput=()=>document.getElementById('freqval').textContent=freqSl.value;ampSl.oninput=()=>document.getElementById('ampval').textContent=ampSl.value;drawWave();
   </script>
 </body>
 </html>
