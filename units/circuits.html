@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10. Electric Circuits | HS Physics</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>HS Physics</h1>
+      <p class="tagline">Full-Year High School Physics Companion</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <a href="measurement.html">1. Measurement</a>
+      <a href="kinematics.html">2. Kinematics</a>
+      <a href="dynamics.html">3. Dynamics</a>
+      <a href="energy.html">4. Energy</a>
+      <a href="momentum.html">5. Momentum</a>
+      <a href="circular.html">6. Circular & Gravity</a>
+      <a href="rotation.html">7. Rotation</a>
+      <a href="waves.html">8. Waves & Sound</a>
+      <a href="electrostatics.html">9. Electrostatics</a>
+      <a href="circuits.html" class="active">10. Circuits</a>
+      <a href="magnetism.html">11. Magnetism</a>
+      <a href="optics.html">12. Optics</a>
+      <a href="modern.html">13. Modern</a>
+      <a href="../formulas.html">Formula Sheet</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>10 — Electric Circuits</h2>
+      <p>Current, resistance, voltage, Ohm’s law, series & parallel, and power in circuits.</p>
+    </div>
+
+    <article class="concept">
+      <h3>Current, Voltage, Resistance</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>Current is the flow of electric charge. Voltage is the “push” that makes charge flow. Resistance is how much the material fights against that flow.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>Current I = ΔQ/Δt (amperes). Conventional current is the direction positive charges would flow. Voltage (potential difference) is the work per unit charge. Resistance R = V/I. Ohm’s law: V = IR for ohmic materials.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Current density J = nqv_d; total current I = ∫ J · dA. Ohm’s law in local form is J = σE. Resistance of a conductor is R = ρL/A, where ρ is resistivity. Voltage is the line integral of the electric field.</p>
+      </div>
+
+      <div class="formulas">
+        <code>I = ΔQ / Δt</code>
+        <code>V = IR</code>
+        <code>R = ρL / A</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Series & Parallel Circuits</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>Series: one path only — current is the same everywhere; voltages add. Parallel: multiple paths — voltage is the same across each branch; currents add.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>Series: I same, V total = ΣV, R_eq = ΣR. Parallel: V same, I total = ΣI, 1/R_eq = Σ(1/R). Real circuits are combinations; reduce step by step to a single equivalent resistance.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Kirchhoff’s current law (junction rule) expresses charge conservation; Kirchhoff’s voltage law (loop rule) expresses energy conservation (conservative electrostatic field). Series and parallel reduction are the simplest applications of these laws for two-terminal networks of resistors.</p>
+      </div>
+
+      <div class="formulas">
+        <code>Series: R_eq = R₁ + R₂ + …</code>
+        <code>Parallel: 1/R_eq = 1/R₁ + 1/R₂ + …</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Electric Power</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>Power tells you how fast a circuit converts electrical energy into heat, light, or motion. A higher-power device uses energy faster.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>P = IV = I²R = V²/R. Energy used E = Pt. Household energy is often measured in kilowatt-hours.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Instantaneous power delivered to a circuit element is P = IV. For a resistor this becomes I²R or V²/R and appears as Joule heating. The time-averaged power in AC circuits involves the power factor cosφ.</p>
+      </div>
+
+      <div class="formulas">
+        <code>P = IV = I²R = V²/R</code>
+        <code>E = Pt</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Kirchhoff’s Rules</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>At any junction, charge doesn’t pile up — what flows in must flow out. Around any closed loop, the total “ups” and “downs” in voltage must cancel to zero.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>Junction rule: ΣI_in = ΣI_out. Loop rule: ΣΔV = 0 around any closed loop. Assign current directions, write equations, and solve the resulting system.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Kirchhoff’s current law is the integral form of charge conservation at a node. Kirchhoff’s voltage law follows from the electrostatic field being irrotational (∮ E · dl = 0). Together they generate a complete set of linear equations for the branch currents in a lumped resistive network.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>HS Physics Year Companion — Unit 10</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9. Electrostatics | HS Physics</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>HS Physics</h1>
+      <p class="tagline">Full-Year High School Physics Companion</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <a href="measurement.html">1. Measurement</a>
+      <a href="kinematics.html">2. Kinematics</a>
+      <a href="dynamics.html">3. Dynamics</a>
+      <a href="energy.html">4. Energy</a>
+      <a href="momentum.html">5. Momentum</a>
+      <a href="circular.html">6. Circular & Gravity</a>
+      <a href="rotation.html">7. Rotation</a>
+      <a href="waves.html">8. Waves & Sound</a>
+      <a href="electrostatics.html" class="active">9. Electrostatics</a>
+      <a href="circuits.html">10. Circuits</a>
+      <a href="magnetism.html">11. Magnetism</a>
+      <a href="optics.html">12. Optics</a>
+      <a href="modern.html">13. Modern</a>
+      <a href="../formulas.html">Formula Sheet</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>09 — Electrostatics</h2>
+      <p>Electric charge at rest: forces, fields, potential, and energy.</p>
+    </div>
+
+    <article class="concept">
+      <h3>Electric Charge</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>Charge is a basic property of particles. There are two kinds: positive and negative. Same kinds push each other away; opposite kinds pull toward each other.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>Charge is quantized in units of e = 1.60 × 10⁻¹⁹ C. Charge is conserved. Conductors allow charge to move freely; insulators do not. Charging methods: friction, conduction, induction.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Electric charge is a conserved Lorentz scalar. The elementary charge e is a fundamental constant. Macroscopic charge densities are continuous approximations to large numbers of elementary charges. Charge conservation is expressed locally by the continuity equation ∂ρ/∂t + ∇·J = 0.</p>
+      </div>
+
+      <div class="formulas">
+        <code>e = 1.60 × 10⁻¹⁹ C</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Coulomb’s Law</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>The electric force between two charges gets stronger when the charges are larger and weaker when they are farther apart — specifically, it drops with the square of the distance.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>F = k |q₁ q₂| / r², where k = 9.0 × 10⁹ N·m²/C². Direction is along the line joining the charges: attractive for opposite signs, repulsive for like signs. Force is a vector; use components when multiple charges are present.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Coulomb’s law gives the electrostatic force between two point charges in free space: F = (1/(4πε₀)) q₁q₂ r̂ / r². It is an inverse-square central force, conservative, and the foundation of classical electrostatics. Superposition holds because Maxwell’s equations are linear.</p>
+      </div>
+
+      <div class="formulas">
+        <code>F = k |q₁q₂| / r²</code>
+        <code>k = 9.0 × 10⁹ N·m²/C²</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Electric Field</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>An electric field is the invisible influence that a charge creates in the space around it. Another charge placed in that field feels a force. Field lines show the direction a positive test charge would be pushed.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>E = F/q₀ (force on a small positive test charge). For a point charge E = kq / r². Field lines begin on positive charges and end on negative charges; density indicates strength. Uniform fields exist between parallel plates.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>The electric field is defined as the force per unit charge in the limit of a vanishing test charge: E = lim (F/q₀). It is a vector field satisfying ∇·E = ρ/ε₀ and ∇×E = 0 in electrostatics. The field of a point charge is E = (1/(4πε₀)) q r̂ / r².</p>
+      </div>
+
+      <div class="formulas">
+        <code>E = F / q</code>
+        <code>E = kq / r²  (point charge)</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Electric Potential & Potential Energy</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>Electric potential is like height for gravity — it tells you how much energy a charge would have if you placed it there. Moving a charge “uphill” against the field stores potential energy.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>Potential difference V = ΔU/q. For a point charge V = kq/r (taking V=0 at infinity). PE of two point charges U = kq₁q₂/r. In a uniform field ΔV = Ed.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Electric potential is the scalar potential whose negative gradient is the electric field: E = −∇V. Absolute potential is defined only up to a constant; differences are measurable. The potential energy of a charge configuration is (ε₀/2)∫E² dV or equivalently (1/2)Σ qᵢVᵢ.</p>
+      </div>
+
+      <div class="formulas">
+        <code>V = kq / r</code>
+        <code>U = kq₁q₂ / r</code>
+        <code>ΔV = Ed  (uniform field)</code>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>HS Physics Year Companion — Unit 9</p>
+    </div>
+  </footer>
+</body>
+</html>
