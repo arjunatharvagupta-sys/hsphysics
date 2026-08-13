@@ -7,52 +7,51 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>HS Physics</h1>
-      <p class="tagline">Full-year high school physics companion</p>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="../index.html">Home</a>
-      <a href="measurement.html">1. Measurement</a>
-      <a href="kinematics.html" class="active">2. Kinematics</a>
-      <a href="dynamics.html">3. Dynamics</a>
-      <a href="energy.html">4. Energy</a>
-      <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular</a>
-      <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves</a>
-      <a href="electrostatics.html">9. Electrostatics</a>
-      <a href="circuits.html">10. Circuits</a>
-      <a href="magnetism.html">11. Magnetism</a>
-      <a href="optics.html">12. Optics</a>
-      <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formulas</a>
-    </div>
-  </nav>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a>
+    <a href="measurement.html">1. Measurement</a>
+    <a href="kinematics.html" class="active">2. Kinematics</a>
+    <a href="dynamics.html">3. Dynamics</a>
+    <a href="energy.html">4. Energy</a>
+    <a href="momentum.html">5. Momentum</a>
+    <a href="circular.html">6. Circular</a>
+    <a href="rotation.html">7. Rotation</a>
+    <a href="waves.html">8. Waves</a>
+    <a href="electrostatics.html">9. Electrostatics</a>
+    <a href="circuits.html">10. Circuits</a>
+    <a href="magnetism.html">11. Magnetism</a>
+    <a href="optics.html">12. Optics</a>
+    <a href="modern.html">13. Modern</a>
+    <a href="../formulas.html">Formulas</a>
+  </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Kinematics</h2>
-      <p>Describing motion without asking what causes it — position, velocity, acceleration, and the equations that connect them.</p>
+      <p>Describing motion without asking what causes it. Scalars vs vectors, graphs, 1D and 2D motion, free fall, projectiles, and relative motion.</p>
     </div>
 
     <article class="concept">
-      <h3>Distance and Displacement</h3>
-      <div class="explain" data-levels='["Distance is how much ground you covered while walking around. Displacement is the straight-line arrow from where you started to where you finished — it has both size and direction.","Distance is a scalar: the total path length traveled. Displacement is a vector: the change in position, Δx = x_final − x_initial. Displacement depends only on the endpoints, not on the path taken between them.","Distance is the scalar arc length of a trajectory. Displacement is the vector difference between final and initial position vectors and is independent of path. In one dimension it reduces to a signed quantity; in higher dimensions it is a vector in Euclidean space."]'>
-        <p></p>
-        <button class="hit" aria-label="Cycle explanation"></button>
+      <h3>Scalars and Vectors</h3>
+      <div class="explain" data-levels='["Some measurements are just amounts (how much). Others are amounts plus a direction (which way). Speed is just an amount. Velocity is speed plus direction.","A scalar has magnitude only (distance, speed, mass, time, energy). A vector has magnitude and direction (displacement, velocity, acceleration, force). In one dimension direction is shown by a sign; in two or more dimensions by components or angles.","Scalars are invariant under coordinate rotations; vectors transform with a definite rule under changes of basis. Physical laws must be formulated so that both sides of an equation are the same type of quantity."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
+      <div class="note"><h4>Tip</h4><p>Never add a scalar to a vector. If an equation mixes them, it is wrong. Always check units and quantity type before solving.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Distance and Displacement</h3>
+      <div class="explain" data-levels='["Distance is how much ground you covered. Displacement is the straight arrow from start to finish — size and direction.","Distance is path length (scalar). Displacement Δx = x_f − x_i is a vector that depends only on endpoints. You can walk a long distance and still have zero displacement if you return to the start.","Distance is the scalar arc length of the trajectory. Displacement is the vector difference of position vectors and is path-independent."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="mistakes"><h4>Common mistake</h4><p>Treating distance and displacement as interchangeable. On a round trip distance is positive; displacement is zero.</p></div>
     </article>
 
     <article class="concept">
       <h3>Speed and Velocity</h3>
-      <div class="explain" data-levels='["Speed is how fast you are going. Velocity is how fast you are going and which way. Sixty miles per hour north is a velocity; sixty miles per hour by itself is only a speed.","Speed is the scalar rate of change of distance. Average speed equals total distance divided by total time. Velocity is the vector rate of change of displacement. Average velocity equals Δx / Δt. Instantaneous velocity is the limit of that ratio as the time interval approaches zero — the derivative dx/dt.","Speed is the magnitude of the velocity vector. Instantaneous velocity is the time derivative of the position vector, v = dr/dt. Average velocity over an interval is displacement divided by elapsed time. Distinguishing average from instantaneous quantities becomes essential whenever acceleration is nonzero."]'>
-        <p></p>
-        <button class="hit" aria-label="Cycle explanation"></button>
+      <div class="explain" data-levels='["Speed is how fast. Velocity is how fast and which way. Average speed uses total path length; average velocity uses displacement.","Average speed = total distance / total time. Average velocity = Δx / Δt. Instantaneous velocity is the derivative dx/dt — the slope of the position-time graph at one instant.","Speed is the magnitude of velocity. Instantaneous velocity v = dr/dt. Average velocity is the displacement divided by elapsed time; it equals the instantaneous velocity only when velocity is constant."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>v_avg = Δx / Δt</code>
@@ -63,56 +62,61 @@
 
     <article class="concept">
       <h3>Acceleration</h3>
-      <div class="explain" data-levels='["Acceleration is how quickly velocity is changing. Speeding up, slowing down, or turning all count as acceleration because the velocity vector is changing in every case.","Acceleration is the rate of change of velocity: a = Δv / Δt. It is a vector. In one dimension, speeding up in the direction of velocity means acceleration and velocity have the same sign; slowing down means opposite signs. Constant acceleration produces the four standard kinematic equations.","Acceleration is the second time derivative of position (or the first derivative of velocity): a = dv/dt = d²r/dt². When acceleration is constant, integration yields the familiar kinematic relations. In general, acceleration may have components both parallel (tangential) and perpendicular (centripetal) to the velocity."]'>
-        <p></p>
-        <button class="hit" aria-label="Cycle explanation"></button>
+      <div class="explain" data-levels='["Acceleration is how quickly velocity changes. Speeding up, slowing down, or turning all count — any change in the velocity vector is acceleration.","a = Δv / Δt. In 1D, if velocity and acceleration have the same sign the object speeds up; opposite signs means it slows down. Instantaneous acceleration is dv/dt, the slope of the velocity-time graph.","Acceleration a = dv/dt = d²r/dt². It may have tangential and centripetal components. Constant acceleration is a strong idealization that yields the standard kinematic equations."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-      <div class="formulas">
-        <code>a_avg = Δv / Δt</code>
-        <code>a = dv/dt = d²x/dt²</code>
+      <div class="mistakes"><h4>Common mistake</h4><p>Thinking acceleration is only “speeding up.” An object moving right while slowing down has leftward acceleration. Deceleration is not a separate vector; it is acceleration opposite velocity.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Motion Graphs</h3>
+      <div class="explain" data-levels='["A position-time graph shows where something is. Steeper means faster. A velocity-time graph shows how fast; the slope is acceleration and the area under the curve is displacement.","Position-time: slope = velocity. Velocity-time: slope = acceleration, area under curve = displacement. Acceleration-time: area under curve = change in velocity. Curved position-time means changing velocity (acceleration).","Graphical kinematics follows from the fundamental theorem of calculus: velocity is the derivative of position; displacement is the integral of velocity. Area and slope interpretations are exact for continuous functions."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
+      <div class="note"><h4>Exam tip</h4><p>Sketch the graph even when the problem does not ask for one. It reveals whether velocity is constant, when the object stops, and the sign of acceleration.</p></div>
     </article>
 
     <article class="concept">
       <h3>Constant-Acceleration Equations</h3>
-      <div class="explain" data-levels='["If something speeds up or slows down at a steady rate, four formulas let you find any missing piece — distance, final speed, time — as long as you know three of the other quantities.","When acceleration is constant the following equations relate position, velocity, acceleration, and time. Each equation uses only four of the five variables. Choose the equation that omits the variable you neither know nor need.","Under constant acceleration the differential equation a = dv/dt integrates to v = v₀ + at. A second integration yields x = x₀ + v₀t + ½at². Elimination of time or of acceleration between these relations produces the remaining two equations, forming a complete algebraic set for one-dimensional motion with constant a."]'>
-        <p></p>
-        <button class="hit" aria-label="Cycle explanation"></button>
+      <div class="explain" data-levels='["When acceleration stays steady, four formulas connect position, velocity, acceleration, and time. Pick the one that leaves out the variable you do not know and do not need.","The four equations assume constant a. List knowns and unknowns, choose the equation missing the unwanted variable, solve symbolically, then substitute numbers with units.","Constant a integrates once to v = v₀ + at and twice to x = x₀ + v₀t + ½at². Eliminating t or a produces the other two relations. The set is algebraically complete for 1D motion with constant acceleration."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>v = v₀ + at</code>
         <code>x = x₀ + v₀t + ½at²</code>
-        <code>v² = v₀² + 2a(x − x₀)</code>
+        <code>v² = v₀² + 2aΔx</code>
         <code>x = x₀ + ½(v₀ + v)t</code>
       </div>
-      <div class="example">
-        <h4>Example</h4>
-        <p>A car starts from rest and accelerates at 3.0 m/s² for 5.0 s. Distance traveled: x = ½(3.0)(5.0)² = 37.5 m ≈ 38 m (two significant figures).</p>
-      </div>
+      <div class="example"><h4>Example</h4><p>Car from rest, a = 3.0 m/s², t = 5.0 s. x = ½(3.0)(25) = 37.5 m ≈ 38 m (2 sig figs). Check: units m/s² × s² = m.</p></div>
+      <div class="note"><h4>Problem-solving order</h4><p>1. Draw a sketch and choose a positive direction. 2. List knowns/unknowns with signs. 3. Pick equation. 4. Solve symbols first. 5. Substitute and check units and reasonableness.</p></div>
     </article>
 
     <article class="concept">
       <h3>Free Fall</h3>
-      <div class="explain" data-levels='["When the only force acting is gravity, an object falls with the same acceleration no matter how heavy it is — about 9.8 meters per second faster toward the ground every second.","Free fall means the only force is gravity (air resistance neglected). Acceleration is g ≈ 9.80 m/s² downward and is constant near Earth’s surface. All kinematic equations apply with a = −g if upward is chosen positive. An object thrown upward slows, stops, then speeds downward; velocity at the same height on the way up and down has equal magnitude and opposite sign.","In the uniform gravitational-field approximation valid near Earth’s surface, the acceleration of free fall is the constant vector g directed along the local vertical. The equations of motion reduce to the constant-acceleration set with a = g. Independence of mass follows from the equivalence of inertial and gravitational mass."]'>
-        <p></p>
-        <button class="hit" aria-label="Cycle explanation"></button>
+      <div class="explain" data-levels='["Ignore air and everything falls with the same acceleration — about 9.8 m/s² downward — no matter how heavy it is.","Free fall: only gravity acts (air neglected). a = −g if up is positive. Same height going up and down ⇒ same speed, opposite velocity. Time to top equals time from top to same height.","Near Earth the gravitational field is approximately uniform, so a = g = constant. Mass independence follows from equivalence of inertial and gravitational mass. Real trajectories include drag and become mass- and shape-dependent."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-      <div class="formulas">
-        <code>g ≈ 9.80 m/s² downward</code>
-      </div>
+      <div class="mistakes"><h4>Common misconception</h4><p>“Heavier objects fall faster.” In vacuum they do not. Air resistance makes a crumpled paper fall faster than a flat sheet; mass itself is not the cause.</p></div>
     </article>
 
     <article class="concept">
       <h3>Projectile Motion</h3>
-      <div class="explain" data-levels='["Throw a ball at an angle. The sideways part of its motion stays steady because nothing pushes it sideways. The up-and-down part behaves exactly like free fall. The curved path is just those two motions happening together.","Projectile motion separates into independent horizontal and vertical components. Horizontal: aₓ = 0 so vₓ = v₀ cos θ remains constant. Vertical: aᵧ = −g and the free-fall equations apply. Time of flight, range, and maximum height follow by combining the components. The trajectory is a parabola.","In the absence of air resistance the equations of motion separate in Cartesian coordinates. Horizontal motion is uniform; vertical motion is uniformly accelerated by g. The parametric equations x(t) = (v₀ cos θ)t and y(t) = (v₀ sin θ)t − ½gt² may be combined to eliminate time, yielding the parabolic trajectory y(x)."]'>
-        <p></p>
-        <button class="hit" aria-label="Cycle explanation"></button>
+      <div class="explain" data-levels='["Throw at an angle: sideways motion stays steady; up-down motion is free fall. The curve is both happening at once.","Horizontal: aₓ = 0, vₓ = v₀ cos θ constant. Vertical: aᵧ = −g. Range, height, and flight time come from combining components. Trajectory is a parabola (no air).","Equations separate in Cartesian coordinates. Parametric form: x = (v₀ cos θ)t, y = (v₀ sin θ)t − ½gt². Eliminating t yields the parabolic trajectory. Air resistance makes the path asymmetric and shortens range."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>v₀ₓ = v₀ cos θ &nbsp;&nbsp; v₀ᵧ = v₀ sin θ</code>
-        <code>Range R = (v₀² sin 2θ) / g</code>
-        <code>Max height H = (v₀ sin θ)² / (2g)</code>
-        <code>Time of flight T = (2 v₀ sin θ) / g</code>
+        <code>R = (v₀² sin 2θ)/g &nbsp;&nbsp; (level ground)</code>
+        <code>H = (v₀ sin θ)²/(2g)</code>
+        <code>T = 2 v₀ sin θ / g</code>
+      </div>
+      <div class="note"><h4>Tip</h4><p>Maximum range on level ground is at 45°. Complementary angles (30° and 60°) give the same range but different times of flight and max heights.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Relative Motion</h3>
+      <div class="explain" data-levels='["How fast something looks depends on whether you are standing still or moving. A ball thrown inside a moving train looks different to someone on the platform.","Velocity of A relative to C equals velocity of A relative to B plus velocity of B relative to C: v_AC = v_AB + v_BC. Choose a consistent set of frames and add vectorially.","Galilean velocity addition holds when all speeds are much less than c. In special relativity the addition law is nonlinear and prevents any material speed from exceeding c."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
     </article>
 
@@ -126,67 +130,20 @@
           <label>a <input type="range" id="acc" min="-10" max="10" value="-2" step="0.5"> <span id="accval">-2</span></label>
           <button id="startBtn">Start</button>
         </div>
-        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">
-          x = <span id="posRead">0.0</span> m &nbsp;·&nbsp; v = <span id="velRead">8.0</span> m/s &nbsp;·&nbsp; t = <span id="timeRead">0.00</span> s
-        </p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">x = <span id="posRead">0.0</span> m · v = <span id="velRead">8.0</span> m/s · t = <span id="timeRead">0.00</span> s</p>
       </div>
     </article>
   </main>
-
   <footer><div class="container">HS Physics — Kinematics</div></footer>
   <script src="../js/explain.js"></script>
   <script>
-    const canvas = document.getElementById('kinCanvas');
-    const ctx = canvas.getContext('2d');
-    const v0Slider = document.getElementById('v0');
-    const accSlider = document.getElementById('acc');
-    let t = 0, x = 0, v = 8, running = false, animId = null;
-    const dt = 0.02, scale = 7;
-
-    function draw() {
-      ctx.fillStyle = '#080c10';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.strokeStyle = '#243040';
-      ctx.beginPath();
-      ctx.moveTo(0, canvas.height/2);
-      ctx.lineTo(canvas.width, canvas.height/2);
-      ctx.stroke();
-      const px = 40 + x * scale;
-      ctx.fillStyle = '#5eb8f0';
-      ctx.beginPath();
-      ctx.arc(px, canvas.height/2, 11, 0, Math.PI*2);
-      ctx.fill();
-      ctx.strokeStyle = '#81c784';
-      ctx.beginPath();
-      ctx.moveTo(px, canvas.height/2);
-      ctx.lineTo(px + v * 2.5, canvas.height/2);
-      ctx.stroke();
-    }
-
-    function step() {
-      if (!running) return;
-      const a = parseFloat(accSlider.value);
-      v += a * dt;
-      x += v * dt;
-      t += dt;
-      document.getElementById('posRead').textContent = x.toFixed(1);
-      document.getElementById('velRead').textContent = v.toFixed(1);
-      document.getElementById('timeRead').textContent = t.toFixed(2);
-      if (x < -6 || x > 65) { running = false; return; }
-      draw();
-      animId = requestAnimationFrame(step);
-    }
-
-    function reset() {
-      if (animId) cancelAnimationFrame(animId);
-      t = 0; x = 0; v = parseFloat(v0Slider.value); running = true;
-      draw(); step();
-    }
-
-    v0Slider.oninput = () => { document.getElementById('v0val').textContent = v0Slider.value; };
-    accSlider.oninput = () => { document.getElementById('accval').textContent = accSlider.value; };
-    document.getElementById('startBtn').onclick = reset;
-    draw();
+    const canvas=document.getElementById('kinCanvas'),ctx=canvas.getContext('2d');
+    const v0Slider=document.getElementById('v0'),accSlider=document.getElementById('acc');
+    let t=0,x=0,v=8,running=false,animId=null;const dt=0.02,scale=7;
+    function draw(){ctx.fillStyle='#080c10';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='#243040';ctx.beginPath();ctx.moveTo(0,canvas.height/2);ctx.lineTo(canvas.width,canvas.height/2);ctx.stroke();const px=40+x*scale;ctx.fillStyle='#5eb8f0';ctx.beginPath();ctx.arc(px,canvas.height/2,11,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#81c784';ctx.beginPath();ctx.moveTo(px,canvas.height/2);ctx.lineTo(px+v*2.5,canvas.height/2);ctx.stroke()}
+    function step(){if(!running)return;const a=parseFloat(accSlider.value);v+=a*dt;x+=v*dt;t+=dt;document.getElementById('posRead').textContent=x.toFixed(1);document.getElementById('velRead').textContent=v.toFixed(1);document.getElementById('timeRead').textContent=t.toFixed(2);if(x<-6||x>65){running=false;return}draw();animId=requestAnimationFrame(step)}
+    function reset(){if(animId)cancelAnimationFrame(animId);t=0;x=0;v=parseFloat(v0Slider.value);running=true;draw();step()}
+    v0Slider.oninput=()=>document.getElementById('v0val').textContent=v0Slider.value;accSlider.oninput=()=>document.getElementById('accval').textContent=accSlider.value;document.getElementById('startBtn').onclick=reset;draw();
   </script>
 </body>
 </html>
