@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluids | HS Physics</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a>
+    <a href="measurement.html">1. Measurement</a>
+    <a href="kinematics.html">2. Kinematics</a>
+    <a href="dynamics.html">3. Dynamics</a>
+    <a href="energy.html">4. Energy</a>
+    <a href="momentum.html">5. Momentum</a>
+    <a href="circular.html">6. Circular</a>
+    <a href="rotation.html">7. Rotation</a>
+    <a href="oscillations.html">Oscillations</a>
+    <a href="fluids.html" class="active">Fluids</a>
+    <a href="waves.html">8. Waves</a>
+    <a href="electrostatics.html">9. Electrostatics</a>
+    <a href="circuits.html">10. Circuits</a>
+    <a href="magnetism.html">11. Magnetism</a>
+    <a href="optics.html">12. Optics</a>
+    <a href="modern.html">13. Modern</a>
+    <a href="../formulas.html">Formulas</a>
+  </div></nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>Fluids</h2>
+      <p>Pressure, buoyancy, continuity, and Bernoulli — the core of AP Physics 1 fluids and standard HS treatment.</p>
+    </div>
+
+    <article class="concept">
+      <h3>Density and Pressure</h3>
+      <div class="explain" data-levels='["Density is mass packed into a volume. Pressure is force spread over an area — how hard the fluid pushes on a surface.","Density ρ = m/V. Pressure P = F/A. In a static fluid, pressure increases with depth: P = P₀ + ρgh. Pressure at a given depth is the same in all directions.","Hydrostatic pressure follows from vertical force balance on a fluid element: dP/dz = −ρg. For constant density this integrates to P = P₀ + ρgh. Pascal’s principle: a pressure change applied to an enclosed fluid is transmitted undiminished."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>ρ = m / V</code>
+        <code>P = F / A</code>
+        <code>P = P₀ + ρgh</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Buoyancy (Archimedes)</h3>
+      <div class="explain" data-levels='["An object in a fluid feels an upward push equal to the weight of the fluid it pushes aside. That is why wood floats and why you feel lighter in a pool.","Buoyant force F_b = ρ_fluid V_displaced g. An object floats when average density is less than the fluid’s density. Apparent weight = true weight − buoyant force.","Archimedes’ principle is a direct consequence of the pressure gradient in a gravitational field: the integral of pressure over the surface yields a net upward force equal to the weight of the displaced fluid."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>F_b = ρ_fluid V_disp g</code>
+      </div>
+      <div class="mistakes"><h4>Common mistake</h4><p>Using the object’s volume when it is only partially submerged. Buoyant force depends on the volume of fluid actually displaced, not the object’s total volume unless it is fully submerged.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Continuity</h3>
+      <div class="explain" data-levels='["For an incompressible fluid in a pipe, what flows in must flow out. Narrow section → fluid speeds up; wide section → fluid slows down.","A₁v₁ = A₂v₂ (volume flow rate constant). Mass flow rate ρAv is also constant for steady flow. Narrower area means higher speed.","Continuity is local mass conservation for steady flow: ∇·(ρv) = 0. For incompressible flow this reduces to ∇·v = 0, and integrated over a tube gives A₁v₁ = A₂v₂."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>A₁v₁ = A₂v₂</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Bernoulli’s Principle</h3>
+      <div class="explain" data-levels='["Where a fluid moves faster, its pressure is lower. That is why airplane wings get lift and why a shower curtain gets pulled inward.","Along a streamline for steady, incompressible, inviscid flow: P + ½ρv² + ρgh = constant. Higher speed ↔ lower pressure when height is fixed.","Bernoulli’s equation is a mechanical-energy statement along a streamline derived from the Euler equation. Assumptions: steady, inviscid, incompressible (or barotropic), and flow along a streamline. Viscosity and turbulence invalidate the simple form."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>P + ½ρv² + ρgh = constant</code>
+      </div>
+      <div class="note"><h4>Tip</h4><p>Identify the two points you care about, write Bernoulli between them, and use continuity if areas change. Watch whether height differences matter.</p></div>
+    </article>
+  </main>
+  <footer><div class="container">HS Physics — Fluids</div></footer>
+  <script src="../js/explain.js"></script>
+</body>
+</html>

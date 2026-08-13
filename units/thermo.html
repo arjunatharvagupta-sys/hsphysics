@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermodynamics | HS Physics</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a>
+    <a href="measurement.html">1. Measurement</a>
+    <a href="kinematics.html">2. Kinematics</a>
+    <a href="dynamics.html">3. Dynamics</a>
+    <a href="energy.html">4. Energy</a>
+    <a href="momentum.html">5. Momentum</a>
+    <a href="circular.html">6. Circular</a>
+    <a href="rotation.html">7. Rotation</a>
+    <a href="oscillations.html">Oscillations</a>
+    <a href="fluids.html">Fluids</a>
+    <a href="thermo.html" class="active">Thermo</a>
+    <a href="waves.html">8. Waves</a>
+    <a href="electrostatics.html">9. Electrostatics</a>
+    <a href="circuits.html">10. Circuits</a>
+    <a href="magnetism.html">11. Magnetism</a>
+    <a href="optics.html">12. Optics</a>
+    <a href="modern.html">13. Modern</a>
+    <a href="../formulas.html">Formulas</a>
+  </div></nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>Thermodynamics</h2>
+      <p>Temperature, heat, ideal gases, the first and second laws — core AP Physics 2 thermal topics.</p>
+    </div>
+
+    <article class="concept">
+      <h3>Temperature and Kinetic Theory</h3>
+      <div class="explain" data-levels='["Temperature measures how hot something is — microscopically it is related to how fast the particles are moving on average.","Absolute temperature (kelvin) is proportional to the average translational kinetic energy of particles in an ideal gas: (3/2)kT per molecule. Zero kelvin is absolute zero.","In kinetic theory the pressure of an ideal gas arises from momentum transfer in collisions with the walls. Equating microscopic and macroscopic expressions yields (1/2)m⟨v²⟩ = (3/2)kT."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>KE_avg = (3/2) kT &nbsp;&nbsp; (per molecule)</code>
+        <code>T_K = T_°C + 273</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Ideal Gas Law</h3>
+      <div class="explain" data-levels='["For a dilute gas, pressure, volume, and temperature are linked: squeeze it, heat it, or add more particles and the other quantities adjust in a predictable way.","PV = nRT = NkT. n is moles, N is number of molecules. R = 8.314 J/(mol·K). Processes: isobaric (constant P), isochoric (constant V), isothermal (constant T), adiabatic (no heat exchange).","The ideal-gas equation of state is the low-density limit of real equations of state. It follows from kinetic theory with the assumptions of point particles and no interactions except instantaneous collisions."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>PV = nRT</code>
+        <code>PV = NkT</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Heat and Internal Energy</h3>
+      <div class="explain" data-levels='["Heat is energy transferred because of a temperature difference. Internal energy is the microscopic energy stored inside the system (particle motion and interactions).","Heat Q is energy transfer due to temperature difference. Internal energy U for an ideal gas depends only on temperature: ΔU = nC_v ΔT. Specific heat and heat capacity relate Q to temperature change.","Heat is the disordered energy transfer across a system boundary. Internal energy is a state function; for a monatomic ideal gas U = (3/2)nRT. The path dependence of Q and W is why only ΔU is path-independent."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>Q = mcΔT</code>
+        <code>ΔU = nC_v ΔT &nbsp;&nbsp; (ideal gas)</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>First Law of Thermodynamics</h3>
+      <div class="explain" data-levels='["Energy is conserved. The change in a system’s internal energy equals heat added minus work done by the system (sign conventions vary by textbook).","ΔU = Q − W when W is work done by the system. For a gas, W = PΔV for constant pressure. Adiabatic: Q = 0 ⇒ ΔU = −W. Isochoric: W = 0 ⇒ ΔU = Q.","The first law is conservation of energy applied to a thermodynamic system: dU = đQ − đW. U is a state function; Q and W are path-dependent process quantities. Sign conventions must be stated explicitly."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>ΔU = Q − W &nbsp;&nbsp; (W by system)</code>
+        <code>W = PΔV &nbsp;&nbsp; (isobaric)</code>
+      </div>
+      <div class="note"><h4>Tip</h4><p>Always confirm the sign convention used in your course. Some texts write ΔU = Q + W with W the work done on the system.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Second Law and Entropy (Brief)</h3>
+      <div class="explain" data-levels='["Heat does not spontaneously flow from cold to hot. Natural processes have a preferred direction. Entropy is a measure of that irreversibility and of molecular disorder.","The second law: entropy of an isolated system never decreases. Heat engines cannot convert all heat into work (Carnot limit). Refrigerators require work input to move heat from cold to hot.","Entropy is a state function defined by dS = đQ_rev / T. The second law states that for any real process the total entropy of system plus surroundings increases. The Carnot efficiency η = 1 − T_C/T_H is the upper bound for heat engines between two reservoirs."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>η_Carnot = 1 − T_C / T_H</code>
+      </div>
+    </article>
+  </main>
+  <footer><div class="container">HS Physics — Thermodynamics</div></footer>
+  <script src="../js/explain.js"></script>
+</body>
+</html>
