@@ -3,87 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>7. Rotational Motion | HS Physics</title>
+  <title>Rotation | HS Physics</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>HS Physics</h1>
-      <p class="tagline">Full-Year High School Physics Companion</p>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="../index.html">Home</a>
-      <a href="measurement.html">1. Measurement</a>
-      <a href="kinematics.html">2. Kinematics</a>
-      <a href="dynamics.html">3. Dynamics</a>
-      <a href="energy.html">4. Energy</a>
-      <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular & Gravity</a>
-      <a href="rotation.html" class="active">7. Rotation</a>
-      <a href="waves.html">8. Waves & Sound</a>
-      <a href="electrostatics.html">9. Electrostatics</a>
-      <a href="circuits.html">10. Circuits</a>
-      <a href="magnetism.html">11. Magnetism</a>
-      <a href="optics.html">12. Optics</a>
-      <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formula Sheet</a>
-    </div>
-  </nav>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a>
+    <a href="measurement.html">1. Measurement</a>
+    <a href="kinematics.html">2. Kinematics</a>
+    <a href="dynamics.html">3. Dynamics</a>
+    <a href="energy.html">4. Energy</a>
+    <a href="momentum.html">5. Momentum</a>
+    <a href="circular.html">6. Circular</a>
+    <a href="rotation.html" class="active">7. Rotation</a>
+    <a href="waves.html">8. Waves</a>
+    <a href="electrostatics.html">9. Electrostatics</a>
+    <a href="circuits.html">10. Circuits</a>
+    <a href="magnetism.html">11. Magnetism</a>
+    <a href="optics.html">12. Optics</a>
+    <a href="modern.html">13. Modern</a>
+    <a href="../formulas.html">Formulas</a>
+  </div></nav>
 
   <main class="container">
     <div class="unit-header">
-      <h2>07 — Rotational Motion</h2>
-      <p>Everything that spins: angular versions of position, velocity, acceleration, force, mass, and momentum.</p>
+      <h2>Rotational Motion</h2>
+      <p>Angular versions of position, velocity, acceleration, force, mass, and momentum.</p>
     </div>
 
     <article class="concept">
-      <h3>Angular Displacement, Velocity, Acceleration</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Instead of how far something moves in a straight line, we now care about how many degrees or radians it has turned. Angular velocity is how fast it is spinning; angular acceleration is how quickly that spin rate is changing.</p>
+      <h3>Angular Kinematics</h3>
+      <div class="explain" data-levels='["Instead of how far something moves in a line, we track how many radians it has turned. Angular velocity is spin rate; angular acceleration is how fast that rate changes.","Angular displacement θ is in radians. ω = Δθ/Δt, α = Δω/Δt. Constant-α equations are exact analogs of the linear set: ω = ω₀ + αt, θ = θ₀ + ω₀t + ½αt², etc.","Angular displacement is the oriented angle of rotation about a fixed axis. ω = dθ/dt and α = dω/dt are axial vectors. For constant α the integrated relations mirror linear constant-acceleration kinematics."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Angular displacement θ is measured in radians. Average angular velocity ω = Δθ/Δt. Average angular acceleration α = Δω/Δt. The kinematic equations for constant α are exact analogs of the linear ones: ω = ω₀ + αt, θ = θ₀ + ω₀t + ½αt², etc.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Angular displacement is the oriented angle through which a rigid body rotates about a fixed axis. Angular velocity ω = dθ/dt and angular acceleration α = dω/dt are axial vectors. For constant α the integrated kinematic relations mirror the linear constant-acceleration set.</p>
-      </div>
-
       <div class="formulas">
         <code>ω = ω₀ + αt</code>
         <code>θ = θ₀ + ω₀t + ½αt²</code>
-        <code>ω² = ω₀² + 2αΔθ</code>
-        <code>s = rθ &nbsp;&nbsp; v = rω &nbsp;&nbsp; a_t = rα</code>
+        <code>s = rθ &nbsp; v = rω &nbsp; a_t = rα</code>
       </div>
     </article>
 
     <article class="concept">
       <h3>Torque</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Torque is the rotational version of force. It tells you how effectively a force makes something start or stop spinning. Pushing farther from the hinge or pushing perpendicular gives more torque.</p>
+      <div class="explain" data-levels='["Torque is the rotational version of force. Pushing farther from the hinge or pushing perpendicular gives more torque.","τ = rF sinθ. Net torque produces angular acceleration: Στ = Iα. Unit: N·m.","Torque about a point is τ = r × F. For rotation about a fixed axis the axial component of net torque equals Iα."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Torque τ = rF sinθ = rF⊥. It is a vector (direction given by right-hand rule). Net torque produces angular acceleration: Στ = Iα. Unit: N·m.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Torque about a point is the cross product τ = r × F. For a rigid body constrained to rotate about a fixed axis, the component of net torque along that axis equals Iα, where I is the moment of inertia about the axis.</p>
-      </div>
-
       <div class="formulas">
         <code>τ = rF sinθ</code>
         <code>Στ = Iα</code>
@@ -92,22 +57,9 @@
 
     <article class="concept">
       <h3>Moment of Inertia</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Moment of inertia is the rotational version of mass. It measures how hard it is to change an object’s spin. Mass farther from the axis makes it harder to spin up.</p>
+      <div class="explain" data-levels='["Moment of inertia is the rotational version of mass. Mass farther from the axis makes an object harder to spin up.","I = Σmr² for point masses. Continuous objects use standard formulas (solid cylinder about central axis: ½MR²). Parallel-axis theorem: I = I_cm + Md².","Moment of inertia about an axis is the second moment of the mass distribution, I = ∫ r_⊥² dm. The parallel-axis theorem relates I about any axis parallel to one through the center of mass."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>I = Σmr² for point masses. Continuous objects use standard formulas (e.g., solid cylinder I = ½MR² about central axis). Parallel-axis theorem: I = I_cm + Md².</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>The moment of inertia about an axis is the second moment of mass distribution, I = ∫ r_⊥² dm. It is the eigenvalue of the inertia tensor corresponding to that axis. The parallel-axis theorem relates I about any axis parallel to one through the center of mass.</p>
-      </div>
-
       <div class="formulas">
         <code>I = Σ m r²</code>
         <code>I = I_cm + Md²</code>
@@ -115,35 +67,17 @@
     </article>
 
     <article class="concept">
-      <h3>Rotational Kinetic Energy & Angular Momentum</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>A spinning object stores kinetic energy just because it is spinning. Angular momentum is the “quantity of rotation” and stays constant if no external torques act (ice skater pulling arms in spins faster).</p>
+      <h3>Rotational Energy and Angular Momentum</h3>
+      <div class="explain" data-levels='["A spinning object stores kinetic energy just because it spins. Angular momentum stays constant if no external torques act — that is why a skater spins faster when arms are pulled in.","KE_rot = ½Iω². L = Iω. If Στ_ext = 0 then L is conserved.","Rotational kinetic energy is ½ω · L. Angular momentum of a rigid body about a principal axis is Iω. Vanishing external torque implies conservation of angular momentum."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>KE_rot = ½Iω². Angular momentum L = Iω. Conservation of angular momentum: if Στ_ext = 0 then L is constant. This is why a collapsing star or a skater speeds up as I decreases.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Rotational kinetic energy is ½ω · L. Angular momentum about a point is L = r × p for a particle and Iω for a rigid body about a principal axis. When the net external torque about a point vanishes, angular momentum about that point is conserved.</p>
-      </div>
-
       <div class="formulas">
         <code>KE_rot = ½Iω²</code>
         <code>L = Iω</code>
-        <code>Στ_ext = dL/dt</code>
       </div>
     </article>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>HS Physics Year Companion — Unit 7</p>
-    </div>
-  </footer>
+  <footer><div class="container">HS Physics — Rotation</div></footer>
+  <script src="../js/explain.js"></script>
 </body>
 </html>
