@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1. Measurement & Uncertainty | HS Physics</title>
+  <title>Measurement | HS Physics</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
     <div class="container">
       <h1>HS Physics</h1>
-      <p class="tagline">Full-Year High School Physics Companion</p>
+      <p class="tagline">Full-year high school physics companion</p>
     </div>
   </header>
 
@@ -22,104 +22,64 @@
       <a href="dynamics.html">3. Dynamics</a>
       <a href="energy.html">4. Energy</a>
       <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular & Gravity</a>
+      <a href="circular.html">6. Circular</a>
       <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves & Sound</a>
+      <a href="waves.html">8. Waves</a>
       <a href="electrostatics.html">9. Electrostatics</a>
       <a href="circuits.html">10. Circuits</a>
       <a href="magnetism.html">11. Magnetism</a>
       <a href="optics.html">12. Optics</a>
       <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formula Sheet</a>
+      <a href="../formulas.html">Formulas</a>
     </div>
   </nav>
 
   <main class="container">
     <div class="unit-header">
-      <h2>01 — Measurement & Uncertainty</h2>
-      <p>The foundation of all physics: how we measure, how precise we can be, and how errors work.</p>
+      <h2>Measurement & Uncertainty</h2>
+      <p>How we quantify the physical world — precision, error, units, and the rules that keep calculations honest.</p>
     </div>
 
-    <!-- CONCEPT 1 -->
     <article class="concept">
       <h3>Significant Figures</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>When you measure something, you can only be as careful as your tool lets you. Significant figures are the digits that actually mean something — the ones you measured for real, not the ones you just guessed or added because the calculator spit them out.</p>
-      </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Significant figures (sig figs) tell us which digits in a measurement are reliable. All non-zero digits are significant. Zeros between non-zero digits are significant. Leading zeros are never significant. Trailing zeros are significant only if a decimal point is present. When multiplying or dividing, the answer has the same number of sig figs as the measurement with the fewest sig figs. When adding or subtracting, the answer is limited by the least precise decimal place.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Significant figures quantify the precision of a measured quantity. The number of significant figures is determined by the resolution of the measuring instrument and the uncertainty inherent in the measurement process. Rules for propagation of significant figures under arithmetic operations ensure that calculated results do not imply greater precision than the input data support. In rigorous work, uncertainty is expressed explicitly (e.g., 12.34 ± 0.05 cm) rather than relying solely on significant-figure conventions.</p>
+      <div class="explain" data-levels='["When you measure something, you can only be as careful as your tool lets you. Significant figures are the digits that actually mean something — the ones you measured for real, not ones you guessed or that a calculator invented.","Significant figures tell which digits in a measurement are reliable. Non-zero digits are always significant. Zeros between non-zeros are significant. Leading zeros never are. Trailing zeros count only if a decimal point is shown. For multiplication or division the answer keeps the fewest sig figs present in the inputs. For addition or subtraction the answer is limited by the least precise decimal place.","Significant figures quantify the precision implied by a measured value. They reflect the resolution of the instrument and the uncertainty of the measurement process. Arithmetic propagation rules prevent calculated results from claiming more precision than the data support. In careful work uncertainty is stated explicitly rather than left implicit in significant-figure counting."]'>
+        <p></p>
+        <button class="hit" aria-label="Cycle explanation"></button>
       </div>
 
       <div class="formulas">
-        <strong>Quick Rules</strong>
         <code>Non-zero digits → always significant</code>
         <code>Zeros between non-zeros → significant</code>
         <code>Leading zeros → not significant</code>
         <code>Trailing zeros with decimal → significant</code>
-        <code>× or ÷ → fewest sig figs wins</code>
-        <code>+ or − → least precise decimal place wins</code>
+        <code>× or ÷ → fewest sig figs</code>
+        <code>+ or − → least precise decimal place</code>
       </div>
 
       <div class="example">
-        <h4>Worked Example</h4>
-        <p>You measure length = 12.50 cm and width = 3.2 cm. Area = ?</p>
-        <p>12.50 has 4 sig figs. 3.2 has 2 sig figs. Area = 40 cm² (2 sig figs).</p>
+        <h4>Example</h4>
+        <p>Length 12.50 cm (4 sig figs) × width 3.2 cm (2 sig figs) → area = 40 cm² (2 sig figs). The calculator shows 40.000, but the data only support two significant figures.</p>
       </div>
 
       <div class="mistakes">
-        <h4>Common Mistakes</h4>
-        <p>• Counting leading zeros as significant (0.0045 has only 2 sig figs).<br>
-        • Keeping calculator digits that the measurements don’t support.<br>
-        • Mixing up the rules for multiplication vs addition.</p>
+        <h4>Common mistakes</h4>
+        <p>Counting leading zeros (0.0045 has two sig figs, not four). Keeping every digit the calculator displays. Mixing the multiplication rule with the addition rule.</p>
       </div>
     </article>
 
-    <!-- CONCEPT 2 -->
     <article class="concept">
       <h3>Accuracy vs Precision</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Accuracy is hitting the bullseye. Precision is hitting the same spot over and over — even if that spot is nowhere near the bullseye. You can be precise but wrong, or accurate but messy.</p>
-      </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Accuracy describes how close a measurement is to the true or accepted value. Precision describes how close repeated measurements are to each other (reproducibility). A set of measurements can be precise but inaccurate (systematic error), accurate but imprecise (large random error), both, or neither.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Accuracy is the degree of closeness of a measured value to the true value of the measurand. Precision refers to the degree of mutual agreement among independent measurements under stipulated conditions and is quantified by statistical measures such as standard deviation or variance. Systematic errors primarily degrade accuracy; random errors primarily degrade precision. Both must be characterized for a complete uncertainty analysis.</p>
+      <div class="explain" data-levels='["Accuracy is hitting the bullseye. Precision is hitting the same spot again and again — even if that spot is far from the center. You can be precise but wrong, or accurate but messy.","Accuracy is how close a measurement is to the true or accepted value. Precision is how close repeated measurements are to each other. A data set can be precise but inaccurate (systematic error), accurate but imprecise (large random scatter), both, or neither.","Accuracy quantifies closeness to the true value of the measurand. Precision quantifies mutual agreement among independent measurements and is expressed by statistical measures such as standard deviation. Systematic errors primarily degrade accuracy; random errors primarily degrade precision. Both must be characterized for a complete uncertainty budget."]'>
+        <p></p>
+        <button class="hit" aria-label="Cycle explanation"></button>
       </div>
     </article>
 
-    <!-- CONCEPT 3 -->
     <article class="concept">
-      <h3>Uncertainty & Error</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>No measurement is perfect. Uncertainty is the “plus or minus” that tells you how much the real value might wiggle around the number you wrote down. Error is the difference between what you got and the real answer.</p>
-      </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Absolute uncertainty is the ± amount attached to a measurement (e.g., 25.0 ± 0.1 cm). Relative (percent) uncertainty is (absolute uncertainty / measured value) × 100%. Random errors scatter measurements around the true value; systematic errors shift all measurements in one direction. Percent error = |(experimental − accepted) / accepted| × 100%.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Measurement uncertainty is a non-negative parameter characterizing the dispersion of values that could reasonably be attributed to the measurand. It is typically expressed as a standard uncertainty (Type A or Type B evaluation) or expanded uncertainty with a stated coverage factor. Error is the difference between a measured result and the true value; because the true value is never known exactly, error itself cannot be known exactly and is instead bounded by the uncertainty.</p>
+      <h3>Uncertainty and Error</h3>
+      <div class="explain" data-levels='["No measurement is perfect. Uncertainty is the plus-or-minus that tells how much the real value might sit away from the number you wrote. Error is the actual difference between your result and the true value.","Absolute uncertainty is the ± quantity attached to a measurement (25.0 ± 0.1 cm). Relative or percent uncertainty is (absolute uncertainty ÷ measured value) × 100%. Random errors scatter results around the true value; systematic errors shift all results in one direction. Percent error = |(experimental − accepted) / accepted| × 100%.","Measurement uncertainty is a non-negative parameter characterizing the dispersion of values that could reasonably be attributed to the measurand. It is evaluated by Type A (statistical) or Type B (other) methods and often reported as an expanded uncertainty with a stated coverage factor. Error is the difference between a result and the true value; because the true value is never known exactly, error itself is bounded by the uncertainty rather than known precisely."]'>
+        <p></p>
+        <button class="hit" aria-label="Cycle explanation"></button>
       </div>
 
       <div class="formulas">
@@ -128,23 +88,11 @@
       </div>
     </article>
 
-    <!-- CONCEPT 4 -->
     <article class="concept">
-      <h3>SI Units & Scientific Notation</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Scientists all agreed on the same measuring sticks so everyone talks the same language. Meters for distance, kilograms for mass, seconds for time. Scientific notation is just a short way to write really big or really tiny numbers without a million zeros.</p>
-      </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>The SI base units used in physics are: meter (m) for length, kilogram (kg) for mass, second (s) for time, ampere (A) for current, kelvin (K) for temperature, mole (mol) for amount of substance, and candela (cd) for luminous intensity. Derived units (newton, joule, watt, etc.) are combinations of these. Scientific notation writes numbers as a × 10ⁿ where 1 ≤ |a| < 10.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>The International System of Units (SI) provides a coherent system of base and derived units defined by fixed values of fundamental constants (since the 2019 revision). All derived units are formed by products and quotients of the seven base units. Scientific notation (or standard form) is the conventional representation of numerical values in orders of magnitude, facilitating order-of-magnitude reasoning and consistent significant-figure handling.</p>
+      <h3>SI Units and Scientific Notation</h3>
+      <div class="explain" data-levels='["Scientists agreed on shared measuring sticks so everyone speaks the same language. Meters for distance, kilograms for mass, seconds for time. Scientific notation is a short way to write very large or very small numbers without a long string of zeros.","The SI base units used in physics are meter (m), kilogram (kg), second (s), ampere (A), kelvin (K), mole (mol), and candela (cd). Derived units such as the newton, joule, and watt are combinations of these. Scientific notation writes a number as a × 10ⁿ where 1 ≤ |a| < 10.","The International System of Units (SI) is a coherent system of base and derived units defined by fixed values of fundamental constants. All derived units are formed from products and quotients of the seven base units. Scientific notation is the conventional representation that makes order-of-magnitude reasoning and significant-figure handling transparent."]'>
+        <p></p>
+        <button class="hit" aria-label="Cycle explanation"></button>
       </div>
 
       <div class="formulas">
@@ -155,28 +103,14 @@
 
     <article class="concept">
       <h3>Dimensional Analysis</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Units have to match on both sides of an equation, just like you can’t add apples to oranges. If the units don’t work out, the equation is wrong.</p>
-      </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Dimensional analysis checks that both sides of an equation have the same base units (dimensions). It is also used to convert between units by multiplying by conversion factors that equal 1. Any valid physics equation must be dimensionally consistent.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Dimensional homogeneity is a necessary (though not sufficient) condition for the validity of any physical equation. Every term in an equation must transform identically under a change of units of the base quantities. Buckingham’s π theorem formalizes the construction of dimensionless groups from dimensionally consistent sets of variables.</p>
+      <div class="explain" data-levels='["Units have to match on both sides of an equation. You cannot add apples to oranges. If the units do not work out, the equation is wrong.","Dimensional analysis checks that both sides of an equation carry the same base units. It is also used to convert between units by multiplying by conversion factors that equal one. Any valid physics equation must be dimensionally consistent.","Dimensional homogeneity is a necessary condition for the validity of a physical equation. Every term must transform identically under a change of units of the base quantities. Buckingham’s π theorem formalizes the construction of dimensionless groups from a dimensionally consistent set of variables."]'>
+        <p></p>
+        <button class="hit" aria-label="Cycle explanation"></button>
       </div>
     </article>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>HS Physics Year Companion — Unit 1</p>
-    </div>
-  </footer>
+  <footer><div class="container">HS Physics — Measurement</div></footer>
+  <script src="../js/explain.js"></script>
 </body>
 </html>
