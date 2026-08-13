@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11. Magnetism | HS Physics</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>HS Physics</h1>
+      <p class="tagline">Full-Year High School Physics Companion</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <a href="measurement.html">1. Measurement</a>
+      <a href="kinematics.html">2. Kinematics</a>
+      <a href="dynamics.html">3. Dynamics</a>
+      <a href="energy.html">4. Energy</a>
+      <a href="momentum.html">5. Momentum</a>
+      <a href="circular.html">6. Circular & Gravity</a>
+      <a href="rotation.html">7. Rotation</a>
+      <a href="waves.html">8. Waves & Sound</a>
+      <a href="electrostatics.html">9. Electrostatics</a>
+      <a href="circuits.html">10. Circuits</a>
+      <a href="magnetism.html" class="active">11. Magnetism</a>
+      <a href="optics.html">12. Optics</a>
+      <a href="modern.html">13. Modern</a>
+      <a href="../formulas.html">Formula Sheet</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>11 — Magnetism</h2>
+      <p>Magnetic fields, forces on charges and currents, and electromagnetic induction.</p>
+    </div>
+
+    <article class="concept">
+      <h3>Magnetic Fields</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>A magnetic field is the invisible influence around a magnet or a current-carrying wire. It pushes on other magnets and on moving electric charges.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>Magnetic field B is a vector field. Direction is the way a compass needle points (north). Field lines form closed loops; they never begin or end. Unit: tesla (T). Earth has a weak magnetic field (~10⁻⁵ T).</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>The magnetic field is defined via the Lorentz force law. It is a pseudovector field satisfying ∇·B = 0 (no magnetic monopoles) and ∇×B = μ₀J + μ₀ε₀∂E/∂t (Ampère–Maxwell law). The SI unit is the tesla.</p>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Force on a Moving Charge</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>A magnetic field only pushes on charges that are already moving, and the push is sideways — perpendicular to both the velocity and the field.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>F = qvB sinθ. Direction by right-hand rule (for positive charge). When v ⊥ B the path is a circle of radius r = mv/(qB). Magnetic force does no work because it is always perpendicular to velocity.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>The magnetic part of the Lorentz force is F = q v × B. Because F · v = 0 the magnetic force does no work and leaves kinetic energy unchanged. The resulting motion in a uniform field is a helix of constant pitch and cyclotron frequency ω = qB/m.</p>
+      </div>
+
+      <div class="formulas">
+        <code>F = qvB sinθ</code>
+        <code>r = mv / (qB)</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Force on a Current-Carrying Wire</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>A wire with current is full of moving charges, so a magnetic field can push on the whole wire.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>F = ILB sinθ. Direction again by right-hand rule. Parallel currents attract; antiparallel currents repel.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>A current element Idl experiences dF = I dl × B. For a straight wire of length L this integrates to F = IL × B. The force between two parallel currents is the microscopic origin of the definition of the ampere in older SI formulations.</p>
+      </div>
+
+      <div class="formulas">
+        <code>F = ILB sinθ</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Electromagnetic Induction</h3>
+
+      <div class="level-block eli5">
+        <h4>ELI5</h4>
+        <p>Changing a magnetic field through a loop of wire creates an electric current. Moving a magnet near a coil or changing the current in a nearby coil both work.</p>
+      </div>
+
+      <div class="level-block hs">
+        <h4>High School</h4>
+        <p>Faraday’s law: ε = −dΦ_B/dt, where magnetic flux Φ_B = BA cosθ. Lenz’s law: the induced current creates a field that opposes the change in flux. Motional emf: ε = Bℓv for a rod sliding on rails.</p>
+      </div>
+
+      <div class="level-block pro">
+        <h4>Professional</h4>
+        <p>Faraday’s law in integral form states that the emf around a closed loop equals the negative rate of change of magnetic flux through any surface bounded by the loop. In differential form it is ∇×E = −∂B/∂t. Lenz’s law is the manifestation of energy conservation (the induced current’s magnetic field opposes the change).</p>
+      </div>
+
+      <div class="formulas">
+        <code>ε = −dΦ_B / dt</code>
+        <code>Φ_B = BA cosθ</code>
+        <code>ε = Bℓv  (motional)</code>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>HS Physics Year Companion — Unit 11</p>
+    </div>
+  </footer>
+</body>
+</html>
