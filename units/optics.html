@@ -9,45 +9,66 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html" class="active">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html" class="active">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Optics</h2>
-      <p>Geometric optics (mirrors and lenses) and wave optics (interference and diffraction).</p>
+      <p>Reflection, refraction, mirrors, lenses, and wave optics (interference and diffraction).</p>
     </div>
 
     <article class="concept">
-      <h3>Reflection and Mirrors</h3>
-      <div class="explain" data-levels='["Light bounces off a mirror so the angle it hits equals the angle it leaves. Curved mirrors can focus light or make images look bigger or smaller.","Law of reflection: θᵢ = θᵣ. Plane mirrors form virtual, upright, same-size images. Spherical mirrors obey 1/f = 1/dₒ + 1/dᵢ.","The law of reflection follows from Fermat’s principle. The mirror equation is the paraxial approximation to a spherical reflecting surface."]'>
+      <h3>Reflection and Plane Mirrors</h3>
+      <div class="explain" data-levels='["Light bounces so the incoming angle equals the outgoing angle. A flat mirror makes a virtual image as far behind as the object is in front.","θᵢ = θᵣ (angles from the normal). Plane mirror: virtual, upright, same size, dᵢ = −dₒ, m = +1.","Reflection follows from Fermat’s principle (stationary optical path) or from boundary conditions on the electromagnetic field."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-      <div class="formulas">
-        <code>θᵢ = θᵣ</code>
-        <code>1/f = 1/dₒ + 1/dᵢ</code>
-      </div>
+      <div class="formulas"><code>θᵢ = θᵣ</code></div>
     </article>
 
     <article class="concept">
-      <h3>Refraction and Lenses</h3>
-      <div class="explain" data-levels='["Light bends when it enters a different material because it changes speed. Lenses use this bending to focus light and form images.","Snell’s law: n₁ sinθ₁ = n₂ sinθ₂. Index n = c/v. Thin-lens equation is identical in form to the mirror equation.","Snell’s law follows from phase matching at an interface. The thin-lens equation is the first-order result for a lens of negligible thickness."]'>
+      <h3>Spherical Mirrors</h3>
+      <div class="explain" data-levels='["Concave mirrors can focus light and make real or virtual images. Convex mirrors always make smaller virtual images and are used for wide-angle views.","Mirror equation: 1/f = 1/dₒ + 1/dᵢ. Magnification m = −dᵢ/dₒ = hᵢ/hₒ. Sign conventions matter (real positive is common in intro courses).","Paraxial ray optics linearizes the reflection law on a spherical surface to the mirror equation. Real systems have spherical aberration away from the paraxial limit."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>1/f = 1/dₒ + 1/dᵢ</code>
+        <code>m = −dᵢ/dₒ</code>
+      </div>
+      <div class="note"><h4>Ray checklist (concave)</h4><p>Ray through center of curvature reflects back on itself. Ray parallel to axis reflects through focal point. Ray through focal point reflects parallel to axis.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Refraction and Snell’s Law</h3>
+      <div class="explain" data-levels='["Light bends when it enters a new material because its speed changes. Toward the normal when slowing down; away when speeding up.","n₁ sinθ₁ = n₂ sinθ₂. n = c/v ≥ 1. Total internal reflection when going to a lower-n medium at incidence above critical angle sinθ_c = n₂/n₁.","Snell’s law is phase matching at the interface (or Fermat’s principle). Critical angle exists only for n₁ > n₂. TIR is the basis of optical fibers."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>n₁ sinθ₁ = n₂ sinθ₂</code>
+        <code>n = c/v</code>
+        <code>sinθ_c = n₂/n₁</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Thin Lenses</h3>
+      <div class="explain" data-levels='["Converging lenses focus parallel rays to a point. Diverging lenses spread them. Same equation form as mirrors.","Thin-lens equation: 1/f = 1/dₒ + 1/dᵢ. Converging f > 0; diverging f < 0 (common sign convention). Real images can be projected; virtual images cannot.","The thin-lens equation is first-order optics for a lens of negligible thickness. Lensmaker’s formula relates f to radii and index. Real lenses need corrections for aberrations."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
         <code>1/f = 1/dₒ + 1/dᵢ</code>
+        <code>m = −dᵢ/dₒ</code>
       </div>
     </article>
 
     <article class="concept">
       <h3>Interference and Diffraction</h3>
-      <div class="explain" data-levels='["Light can cancel itself or reinforce itself when two waves meet. It also spreads when it passes through a narrow opening. These effects prove light is a wave.","Double-slit constructive interference: d sinθ = mλ. Single-slit diffraction minimum: a sinθ = mλ. Diffraction gratings produce sharp bright fringes.","Interference is linear superposition of coherent waves. Far-field diffraction is the Fourier transform of the aperture function."]'>
+      <div class="explain" data-levels='["Light waves can cancel or reinforce. Narrow openings make light spread. These effects show light’s wave nature.","Double-slit bright fringes: d sinθ = mλ. Single-slit minima: a sinθ = mλ. Grating: d sinθ = mλ with sharp peaks. Thin films: path difference and phase shifts on reflection determine constructive/destructive conditions.","Far-field diffraction is the Fourier transform of the aperture. Multi-slit interference produces principal maxima that sharpen as the number of slits increases."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>d sinθ = mλ</code>
-        <code>a sinθ = mλ</code>
+        <code>d sinθ = mλ &nbsp;&nbsp; (double slit / grating)</code>
+        <code>a sinθ = mλ &nbsp;&nbsp; (single-slit min)</code>
       </div>
     </article>
   </main>

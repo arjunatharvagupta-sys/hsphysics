@@ -9,47 +9,58 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html" class="active">13. Modern</a><a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html" class="active">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Modern Physics</h2>
-      <p>Relativity, photons, and the quantum atom — the ideas that reshaped physics in the twentieth century.</p>
+      <p>Relativity, photons, photoelectric effect, wave–particle duality, and the Bohr atom.</p>
     </div>
 
     <article class="concept">
       <h3>Special Relativity</h3>
-      <div class="explain" data-levels='["Nothing can go faster than light. When things move very fast, time slows down for them and lengths shrink — but only from the viewpoint of someone watching from outside.","Two postulates: laws of physics are the same in all inertial frames, and c is the same for all observers. Consequences: time dilation Δt = γΔt₀, length contraction L = L₀/γ, with γ = 1/√(1−v²/c²). Also E = mc².","Special relativity is the geometry of Minkowski spacetime. Lorentz transformations leave the interval ds² invariant. Energy–momentum four-vector yields E² = (pc)² + (mc²)²."]'>
+      <div class="explain" data-levels='["Nothing goes faster than light. Fast-moving clocks run slow and lengths shrink along the motion — from the viewpoint of a “stationary” observer.","Postulates: (1) physics same in all inertial frames, (2) c invariant. Time dilation Δt = γΔt₀. Length contraction L = L₀/γ. γ = 1/√(1−v²/c²). E = mc² for rest energy.","Minkowski geometry: Lorentz transformations preserve ds². Four-momentum yields E² = (pc)² + (mc²)². Massless particles have E = pc."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>γ = 1 / √(1 − v²/c²)</code>
+        <code>γ = 1/√(1−v²/c²)</code>
         <code>Δt = γ Δt₀</code>
         <code>E = mc²</code>
       </div>
+      <div class="note"><h4>Tip</h4><p>Proper time Δt₀ is the time in the frame where the clock is at rest. Moving clocks always run slow as seen from the lab.</p></div>
     </article>
 
     <article class="concept">
-      <h3>Photons and the Photoelectric Effect</h3>
-      <div class="explain" data-levels='["Light comes in tiny packets called photons. Each photon carries a fixed energy that depends only on its color. That is why some colors can knock electrons out of metal while others cannot, no matter how bright.","Photon energy E = hf = hc/λ. Electrons are emitted only if f > threshold. K_max = hf − φ. Intensity affects number of electrons, not their individual energies.","Einstein’s photon hypothesis treats light as quanta of energy hf. The work function is the minimum energy to liberate an electron. The linear K_max-versus-frequency relation measures Planck’s constant."]'>
+      <h3>Photons and Photoelectric Effect</h3>
+      <div class="explain" data-levels='["Light comes in packets (photons). Each photon’s energy depends only on frequency/color. Below a threshold frequency, no electrons come out no matter how bright the light.","E = hf = hc/λ. K_max = hf − φ. Intensity changes the number of electrons, not K_max. Stopping potential: eV_s = K_max.","Einstein’s photon hypothesis explains the threshold, the linear K_max-vs-f graph, and instantaneous emission. The slope of that graph is Planck’s constant h."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>E = hf = hc / λ</code>
+        <code>E = hf = hc/λ</code>
         <code>K_max = hf − φ</code>
       </div>
+      <div class="mistakes"><h4>Wave-theory failure</h4><p>Classical waves predicted that brighter light (more intensity) should always free electrons eventually. Experiment: only frequency matters for the threshold.</p></div>
     </article>
 
     <article class="concept">
-      <h3>Wave–Particle Duality and Bohr Model</h3>
-      <div class="explain" data-levels='["Tiny particles like electrons can act like waves. Atoms have only certain allowed energy levels — electrons jump between them by absorbing or emitting a photon of exactly the right energy.","de Broglie wavelength λ = h/p. Bohr model: quantized orbits; hydrogen levels E_n = −13.6 eV / n². Photons emitted or absorbed when electrons change levels: ΔE = hf.","de Broglie’s relation λ = h/p unifies wave and particle aspects of matter. The Bohr model was a semi-classical precursor that correctly predicted the hydrogen spectrum. Full quantum mechanics replaces orbits with stationary-state wave functions."]'>
+      <h3>Wave–Particle Duality</h3>
+      <div class="explain" data-levels='["Electrons and other particles can behave like waves. Every particle has a wavelength related to its momentum.","de Broglie: λ = h/p. Electrons show interference and diffraction. Matter waves explain electron microscope resolution and atomic standing-wave models.","de Broglie wavelength λ = h/p unifies the wave and particle descriptions. Quantum mechanics replaces trajectories with wave functions whose |ψ|² gives probability density."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas"><code>λ = h/p</code></div>
+    </article>
+
+    <article class="concept">
+      <h3>Bohr Model and Spectra</h3>
+      <div class="explain" data-levels='["In the Bohr model, electrons in hydrogen can only occupy certain orbits. Jumping between levels emits or absorbs a photon with energy equal to the level difference.","E_n = −13.6 eV / n² for hydrogen. ΔE = hf for transitions. Absorption: electron goes up; emission: electron goes down. Line spectra are fingerprints of elements.","Bohr quantized angular momentum and matched the Rydberg formula. Full quantum mechanics replaces orbits with energy eigenstates of the Schrödinger equation; selection rules govern allowed transitions."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>λ = h / p</code>
         <code>E_n = −13.6 eV / n²</code>
+        <code>ΔE = hf</code>
       </div>
+      <div class="example"><h4>Example</h4><p>Hydrogen n = 2 → n = 1: ΔE = 10.2 eV. Photon wavelength λ = hc/ΔE ≈ 122 nm (UV, Lyman series).</p></div>
     </article>
   </main>
   <footer><div class="container">HS Physics — Modern Physics</div></footer>

@@ -9,52 +9,66 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html" class="active">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html" class="active">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Electric Circuits</h2>
-      <p>Current, resistance, voltage, Ohm’s law, series and parallel networks, and power.</p>
+      <p>Current, resistance, Ohm’s law, series/parallel, Kirchhoff, power, and circuit problem strategy.</p>
     </div>
 
     <article class="concept">
       <h3>Current, Voltage, Resistance</h3>
-      <div class="explain" data-levels='["Current is the flow of charge. Voltage is the push that makes charge flow. Resistance is how much the material fights that flow.","I = ΔQ/Δt. Voltage is work per unit charge. Resistance R = V/I. Ohm’s law: V = IR for ohmic materials.","Current density J = nqv_d; I = ∫ J · dA. Local Ohm’s law is J = σE. Resistance of a conductor is R = ρL/A."]'>
+      <div class="explain" data-levels='["Current is charge flow. Voltage is the push. Resistance fights the flow.","I = ΔQ/Δt (amperes). Voltage is work per charge. Ohm’s law: V = IR for ohmic materials. R = ρL/A.","Current density J = σE. Resistance R = ρL/A. Ohm’s law is macroscopic; microscopic form is J = σE for linear media."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>I = ΔQ / Δt</code>
+        <code>I = ΔQ/Δt</code>
         <code>V = IR</code>
-        <code>R = ρL / A</code>
+        <code>R = ρL/A</code>
       </div>
+      <div class="mistakes"><h4>Common misconception</h4><p>Current is “used up” in a resistor. Current is the same through series elements; energy is converted, charge is not consumed.</p></div>
     </article>
 
     <article class="concept">
       <h3>Series and Parallel</h3>
-      <div class="explain" data-levels='["Series: one path only — current the same everywhere, voltages add. Parallel: multiple paths — voltage the same across each branch, currents add.","Series: I same, V_total = ΣV, R_eq = ΣR. Parallel: V same, I_total = ΣI, 1/R_eq = Σ(1/R). Reduce combinations step by step.","Kirchhoff’s current law expresses charge conservation at a node; the voltage law expresses energy conservation around a loop. Series and parallel reduction are the simplest applications for resistive networks."]'>
+      <div class="explain" data-levels='["Series: one path — same current, voltages add. Parallel: multiple paths — same voltage, currents add.","Series: R_eq = ΣR, I same, V splits proportional to R. Parallel: 1/R_eq = Σ(1/R), V same, I splits inversely with R. Reduce mixed circuits step by step.","Series and parallel rules follow from KCL and KVL. Equivalent resistance is the two-terminal resistance of the network."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>Series: R_eq = R₁ + R₂ + …</code>
         <code>Parallel: 1/R_eq = 1/R₁ + 1/R₂ + …</code>
       </div>
+      <div class="note"><h4>Tip</h4><p>Two equal resistors in parallel → R/2. Adding a parallel path always decreases R_eq. Adding series always increases R_eq.</p></div>
     </article>
 
     <article class="concept">
-      <h3>Power</h3>
-      <div class="explain" data-levels='["Power tells how fast a circuit converts electrical energy into heat, light, or motion.","P = IV = I²R = V²/R. Energy used E = Pt.","Instantaneous power delivered to an element is P = IV. For a resistor this becomes Joule heating I²R or V²/R."]'>
+      <h3>Kirchhoff’s Rules</h3>
+      <div class="explain" data-levels='["Junction: charge in equals charge out. Loop: voltage rises and drops around a closed path sum to zero.","Junction (KCL): ΣI_in = ΣI_out. Loop (KVL): ΣΔV = 0. Assign current directions, write equations, solve the linear system. Wrong direction guesses just give negative answers.","KCL is charge conservation. KVL is the electrostatic field being conservative (∮E·dl = 0) in steady state. Together they determine all branch currents in a lumped resistive network."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="note"><h4>Strategy</h4><p>1. Label currents and directions. 2. Write one KCL per independent junction. 3. Write KVL for enough loops. 4. Solve. 5. Negative current means opposite direction.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Electric Power</h3>
+      <div class="explain" data-levels='["Power is how fast electrical energy is converted to heat, light, or motion.","P = IV = I²R = V²/R. Brightness of identical bulbs tracks power. Higher R in series takes more of the voltage and dissipates more power.","Instantaneous power P = IV. For a resistor, Joule heating is I²R. Household energy is sold in kWh = power × time."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>P = IV = I²R = V²/R</code>
       </div>
+      <div class="example"><h4>Example</h4><p>120 V across 60 Ω: I = 2 A, P = 240 W. Same resistor at 60 V: P = 60 W (V²/R scales with V²).</p></div>
     </article>
 
     <article class="concept">
-      <h3>Kirchhoff’s Rules</h3>
-      <div class="explain" data-levels='["At any junction, charge does not pile up — what flows in must flow out. Around any closed loop the total voltage rises and drops cancel to zero.","Junction rule: ΣI_in = ΣI_out. Loop rule: ΣΔV = 0 around any closed loop. Assign current directions, write equations, solve.","Kirchhoff’s current law is the integral form of charge conservation. The voltage law follows from the electrostatic field being irrotational. Together they generate a complete linear system for branch currents."]'>
+      <h3>Real Batteries and Internal Resistance</h3>
+      <div class="explain" data-levels='["Real batteries have a little internal resistance. Terminal voltage drops when current is drawn.","ε = terminal voltage + Ir (when discharging). Terminal V = ε − Ir. Short-circuit current is limited by r.","A real cell is modeled as an ideal emf in series with internal resistance r. Maximum power transfer to the load occurs when R_load = r."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>V_terminal = ε − Ir</code>
       </div>
     </article>
   </main>

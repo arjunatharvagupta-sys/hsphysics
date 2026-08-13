@@ -9,32 +9,18 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a>
-    <a href="measurement.html">1. Measurement</a>
-    <a href="kinematics.html">2. Kinematics</a>
-    <a href="dynamics.html">3. Dynamics</a>
-    <a href="energy.html">4. Energy</a>
-    <a href="momentum.html">5. Momentum</a>
-    <a href="circular.html">6. Circular</a>
-    <a href="rotation.html" class="active">7. Rotation</a>
-    <a href="waves.html">8. Waves</a>
-    <a href="electrostatics.html">9. Electrostatics</a>
-    <a href="circuits.html">10. Circuits</a>
-    <a href="magnetism.html">11. Magnetism</a>
-    <a href="optics.html">12. Optics</a>
-    <a href="modern.html">13. Modern</a>
-    <a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html" class="active">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Rotational Motion</h2>
-      <p>Angular versions of position, velocity, acceleration, force, mass, and momentum.</p>
+      <p>Angular kinematics, torque, moment of inertia, rotational energy, and angular momentum conservation.</p>
     </div>
 
     <article class="concept">
       <h3>Angular Kinematics</h3>
-      <div class="explain" data-levels='["Instead of how far something moves in a line, we track how many radians it has turned. Angular velocity is spin rate; angular acceleration is how fast that rate changes.","Angular displacement θ is in radians. ω = Δθ/Δt, α = Δω/Δt. Constant-α equations are exact analogs of the linear set: ω = ω₀ + αt, θ = θ₀ + ω₀t + ½αt², etc.","Angular displacement is the oriented angle of rotation about a fixed axis. ω = dθ/dt and α = dω/dt are axial vectors. For constant α the integrated relations mirror linear constant-acceleration kinematics."]'>
+      <div class="explain" data-levels='["Same ideas as linear motion, but for spinning: angle, spin rate, and how fast the spin rate changes.","θ in radians. ω = Δθ/Δt, α = Δω/Δt. Constant-α equations mirror linear ones. Link to linear: s = rθ, v = rω, a_t = rα.","Angular quantities are axial vectors. For fixed-axis rotation the scalar equations with sign convention suffice. Linear and angular variables connect through the radius."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
@@ -46,18 +32,19 @@
 
     <article class="concept">
       <h3>Torque</h3>
-      <div class="explain" data-levels='["Torque is the rotational version of force. Pushing farther from the hinge or pushing perpendicular gives more torque.","τ = rF sinθ. Net torque produces angular acceleration: Στ = Iα. Unit: N·m.","Torque about a point is τ = r × F. For rotation about a fixed axis the axial component of net torque equals Iα."]'>
+      <div class="explain" data-levels='["Torque is the rotational equivalent of force. Lever arm and angle matter — push perpendicular and far from the axis for maximum effect.","τ = rF sinθ = r⊥ F = r F⊥. Στ = Iα. Equilibrium: Στ = 0 and ΣF = 0.","τ = r × F. About a fixed axis, the axial component of net torque equals Iα. Choosing the axis wisely can eliminate unknown torques."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>τ = rF sinθ</code>
         <code>Στ = Iα</code>
       </div>
+      <div class="note"><h4>Tip</h4><p>For statics, pick an axis through the line of action of an unknown force so its torque is zero and it drops out of the torque equation.</p></div>
     </article>
 
     <article class="concept">
       <h3>Moment of Inertia</h3>
-      <div class="explain" data-levels='["Moment of inertia is the rotational version of mass. Mass farther from the axis makes an object harder to spin up.","I = Σmr² for point masses. Continuous objects use standard formulas (solid cylinder about central axis: ½MR²). Parallel-axis theorem: I = I_cm + Md².","Moment of inertia about an axis is the second moment of the mass distribution, I = ∫ r_⊥² dm. The parallel-axis theorem relates I about any axis parallel to one through the center of mass."]'>
+      <div class="explain" data-levels='["Moment of inertia is rotational mass — how hard it is to change spin. Mass farther from the axis contributes more.","I = Σmr². Hoop about center: MR². Solid cylinder/disk: ½MR². Solid sphere: ⅖MR². Parallel-axis: I = I_cm + Md².","I = ∫ r_⊥² dm. Parallel-axis theorem follows from expanding the integral about a parallel axis. Perpendicular-axis theorem applies to planar objects."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
@@ -67,13 +54,25 @@
     </article>
 
     <article class="concept">
-      <h3>Rotational Energy and Angular Momentum</h3>
-      <div class="explain" data-levels='["A spinning object stores kinetic energy just because it spins. Angular momentum stays constant if no external torques act — that is why a skater spins faster when arms are pulled in.","KE_rot = ½Iω². L = Iω. If Στ_ext = 0 then L is conserved.","Rotational kinetic energy is ½ω · L. Angular momentum of a rigid body about a principal axis is Iω. Vanishing external torque implies conservation of angular momentum."]'>
+      <h3>Rotational Energy and Rolling</h3>
+      <div class="explain" data-levels='["Spinning objects store kinetic energy. Rolling without slipping has both translational and rotational KE.","KE_rot = ½Iω². Rolling without slip: v = rω and KE_total = ½mv² + ½Iω² = ½mv²(1 + I/(mr²)). Objects with smaller I/(mr²) roll faster down an incline.","For pure rolling v_cm = rω. Energy method plus the rolling constraint solves incline problems without finding friction explicitly (if friction does no work because of no slip at contact)."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>KE_rot = ½Iω²</code>
+        <code>Rolling: v = rω</code>
+      </div>
+      <div class="example"><h4>Example</h4><p>Solid sphere vs hoop down the same incline: sphere (k = ⅖) reaches bottom faster than hoop (k = 1) because more energy goes into translation.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Angular Momentum</h3>
+      <div class="explain" data-levels='["Angular momentum is the quantity of rotation. If no external torque acts, it stays constant — skater spins faster when arms are pulled in.","L = Iω for fixed-axis rotation. Στ_ext = dL/dt. If Στ_ext = 0 then L is conserved. Collisions and explosions can conserve L even when mechanical energy does not.","L = r × p for a particle; L = Iω about a principal axis for a rigid body. Conservation of angular momentum is a consequence of rotational invariance (Noether)."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
         <code>L = Iω</code>
+        <code>Στ_ext = dL/dt</code>
       </div>
     </article>
   </main>

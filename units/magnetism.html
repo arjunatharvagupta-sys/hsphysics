@@ -9,50 +9,64 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html" class="active">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html" class="active">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Magnetism</h2>
-      <p>Magnetic fields, forces on charges and currents, and electromagnetic induction.</p>
+      <p>Magnetic fields, Lorentz force, currents in fields, induction, and Lenz’s law.</p>
     </div>
 
     <article class="concept">
       <h3>Magnetic Fields</h3>
-      <div class="explain" data-levels='["A magnetic field is the invisible influence around a magnet or a current-carrying wire. It pushes on other magnets and on moving charges.","B is a vector field. Direction is the way a compass needle points. Field lines form closed loops. Unit: tesla (T).","The magnetic field is defined via the Lorentz force. It satisfies ∇·B = 0 and ∇×B = μ₀J + μ₀ε₀∂E/∂t."]'>
+      <div class="explain" data-levels='["Magnets and currents create magnetic fields. Field lines form closed loops and show the direction a compass points.","B is measured in teslas. Field lines never begin or end (no monopoles). Direction is the way the north pole of a compass points.","∇·B = 0 expresses the absence of magnetic monopoles. B is defined operationally through the Lorentz force law."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
     </article>
 
     <article class="concept">
       <h3>Force on a Moving Charge</h3>
-      <div class="explain" data-levels='["A magnetic field only pushes on charges that are already moving, and the push is sideways — perpendicular to both velocity and field.","F = qvB sinθ. Direction by right-hand rule. When v ⊥ B the path is a circle of radius r = mv/(qB). Magnetic force does no work.","Magnetic force is F = q v × B. Because F · v = 0 it does no work. Motion in a uniform field is a helix of constant cyclotron frequency ω = qB/m."]'>
+      <div class="explain" data-levels='["Magnetic fields push only on moving charges, and always sideways — perpendicular to both v and B.","F = qvB sinθ. Right-hand rule for positive charges. Path in uniform B (v ⊥ B) is a circle: r = mv/(qB). Magnetic force does no work.","F = q v × B. Because F ⊥ v, kinetic energy is unchanged. Cyclotron frequency ω = qB/m is independent of speed."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>F = qvB sinθ</code>
-        <code>r = mv / (qB)</code>
+        <code>r = mv/(qB)</code>
       </div>
+      <div class="mistakes"><h4>Common mistake</h4><p>Thinking magnetic force can speed up or slow down a charge. It only changes direction. Work is always zero for the magnetic part of the Lorentz force.</p></div>
     </article>
 
     <article class="concept">
-      <h3>Force on a Current</h3>
-      <div class="explain" data-levels='["A wire with current is full of moving charges, so a magnetic field can push on the whole wire.","F = ILB sinθ. Parallel currents attract; antiparallel currents repel.","A current element experiences dF = I dl × B. For a straight wire F = IL × B."]'>
+      <h3>Force on a Current-Carrying Wire</h3>
+      <div class="explain" data-levels='["A wire with current feels a sideways force in a magnetic field because the charges inside are moving.","F = ILB sinθ. Parallel currents attract; antiparallel currents repel. Motors use this force on current loops in magnetic fields.","dF = I dl × B. Two long parallel wires: force per unit length = μ₀ I₁ I₂ / (2πd). This historically defined the ampere."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas"><code>F = ILB sinθ</code></div>
     </article>
 
     <article class="concept">
-      <h3>Electromagnetic Induction</h3>
-      <div class="explain" data-levels='["Changing a magnetic field through a loop of wire creates an electric current. Moving a magnet near a coil or changing current in a nearby coil both work.","Faraday’s law: ε = −dΦ_B/dt with Φ_B = BA cosθ. Lenz’s law: induced current opposes the change in flux. Motional emf: ε = Bℓv.","Faraday’s law states that emf around a loop equals the negative rate of change of magnetic flux. In differential form ∇×E = −∂B/∂t. Lenz’s law is energy conservation."]'>
+      <h3>Magnetic Field from Currents</h3>
+      <div class="explain" data-levels='["Currents create magnetic fields. A long straight wire has circles of B around it; a loop has a field through its center like a short magnet.","Long straight wire: B = μ₀ I / (2πr). Center of a loop: B = μ₀ I / (2R). Solenoid interior: B = μ₀ n I (n turns per length).","Biot–Savart law gives B from a current element. Ampère’s law ∮ B · dl = μ₀ I_enc is powerful for high-symmetry steady currents."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>ε = −dΦ_B / dt</code>
-        <code>Φ_B = BA cosθ</code>
+        <code>Wire: B = μ₀I/(2πr)</code>
+        <code>Solenoid: B = μ₀ n I</code>
       </div>
+    </article>
+
+    <article class="concept">
+      <h3>Electromagnetic Induction</h3>
+      <div class="explain" data-levels='["Change the magnetic flux through a loop and you get an induced emf and current. Moving a magnet, changing area, or changing B all work.","ε = −dΦ_B/dt with Φ_B = BA cosθ. Lenz’s law: induced current creates a field that opposes the change in flux. Motional emf: ε = Bℓv.","Faraday’s law: ∮ E · dl = −dΦ_B/dt. Lenz’s law is energy conservation — the induced current fights the change that produces it."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>ε = −dΦ_B/dt</code>
+        <code>Φ_B = BA cosθ</code>
+        <code>ε = Bℓv</code>
+      </div>
+      <div class="note"><h4>Lenz checklist</h4><p>1. Is flux increasing or decreasing? 2. What B direction would oppose that change? 3. What current direction produces that B? (Right-hand rule.)</p></div>
     </article>
   </main>
   <footer><div class="container">HS Physics — Magnetism</div></footer>
