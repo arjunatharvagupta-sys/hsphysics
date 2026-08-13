@@ -9,27 +9,130 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="index.html">Home</a><a href="units/measurement.html">1. Measurement</a><a href="units/kinematics.html">2. Kinematics</a><a href="units/dynamics.html">3. Dynamics</a><a href="units/energy.html">4. Energy</a><a href="units/momentum.html">5. Momentum</a><a href="units/circular.html">6. Circular</a><a href="units/rotation.html">7. Rotation</a><a href="units/waves.html">8. Waves</a><a href="units/electrostatics.html">9. Electrostatics</a><a href="units/circuits.html">10. Circuits</a><a href="units/magnetism.html">11. Magnetism</a><a href="units/optics.html">12. Optics</a><a href="units/modern.html">13. Modern</a><a href="formulas.html" class="active">Formulas</a>
+    <a href="index.html">Home</a><a href="units/measurement.html">1. Measurement</a><a href="units/kinematics.html">2. Kinematics</a><a href="units/dynamics.html">3. Dynamics</a><a href="units/energy.html">4. Energy</a><a href="units/momentum.html">5. Momentum</a><a href="units/circular.html">6. Circular</a><a href="units/rotation.html">7. Rotation</a><a href="units/oscillations.html">Oscillations</a><a href="units/fluids.html">Fluids</a><a href="units/thermo.html">Thermo</a><a href="units/waves.html">8. Waves</a><a href="units/electrostatics.html">9. Electrostatics</a><a href="units/circuits.html">10. Circuits</a><a href="units/magnetism.html">11. Magnetism</a><a href="units/optics.html">12. Optics</a><a href="units/modern.html">13. Modern</a><a href="formulas.html" class="active">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Formula Sheet</h2>
-      <p>Quick reference for the full year.</p>
+      <p>Full-year reference. Know when each applies, not only the symbols.</p>
     </div>
 
-    <article class="concept"><h3>Kinematics</h3><div class="formulas"><code>v = v₀ + at</code><code>x = x₀ + v₀t + ½at²</code><code>v² = v₀² + 2aΔx</code></div></article>
-    <article class="concept"><h3>Dynamics</h3><div class="formulas"><code>ΣF = ma</code><code>W = mg</code><code>fₖ = μₖN</code></div></article>
-    <article class="concept"><h3>Energy</h3><div class="formulas"><code>W = Fd cosθ</code><code>KE = ½mv²</code><code>PE_g = mgh</code><code>P = IV</code></div></article>
-    <article class="concept"><h3>Momentum</h3><div class="formulas"><code>p = mv</code><code>J = FΔt = Δp</code></div></article>
-    <article class="concept"><h3>Circular & Gravity</h3><div class="formulas"><code>a_c = v²/r</code><code>F_g = Gm₁m₂/r²</code><code>v_orbit = √(GM/r)</code></div></article>
-    <article class="concept"><h3>Rotation</h3><div class="formulas"><code>τ = rF sinθ</code><code>Στ = Iα</code><code>KE_rot = ½Iω²</code><code>L = Iω</code></div></article>
-    <article class="concept"><h3>Waves</h3><div class="formulas"><code>v = fλ</code><code>f_n = nv/(2L)</code></div></article>
-    <article class="concept"><h3>Electrostatics</h3><div class="formulas"><code>F = k|q₁q₂|/r²</code><code>E = kq/r²</code><code>V = kq/r</code></div></article>
-    <article class="concept"><h3>Circuits</h3><div class="formulas"><code>V = IR</code><code>P = I²R</code></div></article>
-    <article class="concept"><h3>Magnetism</h3><div class="formulas"><code>F = qvB sinθ</code><code>ε = −dΦ_B/dt</code></div></article>
-    <article class="concept"><h3>Optics</h3><div class="formulas"><code>1/f = 1/dₒ + 1/dᵢ</code><code>n₁ sinθ₁ = n₂ sinθ₂</code></div></article>
-    <article class="concept"><h3>Modern</h3><div class="formulas"><code>E = hf</code><code>λ = h/p</code><code>E = mc²</code></div></article>
+    <article class="concept"><h3>Kinematics</h3><div class="formulas">
+      <code>v = v₀ + at</code>
+      <code>x = x₀ + v₀t + ½at²</code>
+      <code>v² = v₀² + 2aΔx</code>
+      <code>x = x₀ + ½(v₀+v)t</code>
+    </div></article>
+
+    <article class="concept"><h3>Dynamics</h3><div class="formulas">
+      <code>ΣF = ma</code>
+      <code>W = mg</code>
+      <code>fₛ ≤ μₛN &nbsp;&nbsp; fₖ = μₖN</code>
+      <code>F_s = −kx</code>
+    </div></article>
+
+    <article class="concept"><h3>Energy</h3><div class="formulas">
+      <code>W = Fd cosθ</code>
+      <code>KE = ½mv²</code>
+      <code>PE_g = mgh &nbsp;&nbsp; PE_s = ½kx²</code>
+      <code>W_net = ΔKE</code>
+      <code>P = Fv = W/t</code>
+    </div></article>
+
+    <article class="concept"><h3>Momentum</h3><div class="formulas">
+      <code>p = mv</code>
+      <code>J = FΔt = Δp</code>
+      <code>Σpᵢ = Σp_f (isolated)</code>
+    </div></article>
+
+    <article class="concept"><h3>Circular & Gravity</h3><div class="formulas">
+      <code>a_c = v²/r</code>
+      <code>F_c = mv²/r</code>
+      <code>F_g = Gm₁m₂/r²</code>
+      <code>v_orbit = √(GM/r)</code>
+      <code>T² = (4π²/GM)r³</code>
+      <code>v_escape = √(2GM/R)</code>
+    </div></article>
+
+    <article class="concept"><h3>Rotation</h3><div class="formulas">
+      <code>ω = ω₀ + αt</code>
+      <code>τ = rF sinθ</code>
+      <code>Στ = Iα</code>
+      <code>KE_rot = ½Iω²</code>
+      <code>L = Iω</code>
+      <code>I = I_cm + Md²</code>
+    </div></article>
+
+    <article class="concept"><h3>Oscillations</h3><div class="formulas">
+      <code>T = 2π√(m/k)</code>
+      <code>T = 2π√(L/g)</code>
+      <code>E = ½kA²</code>
+      <code>v_max = Aω</code>
+    </div></article>
+
+    <article class="concept"><h3>Fluids</h3><div class="formulas">
+      <code>P = P₀ + ρgh</code>
+      <code>F_b = ρVg</code>
+      <code>A₁v₁ = A₂v₂</code>
+      <code>P + ½ρv² + ρgh = const</code>
+    </div></article>
+
+    <article class="concept"><h3>Thermodynamics</h3><div class="formulas">
+      <code>PV = nRT</code>
+      <code>ΔU = Q − W</code>
+      <code>Q = mcΔT</code>
+      <code>η_Carnot = 1 − T_C/T_H</code>
+    </div></article>
+
+    <article class="concept"><h3>Waves & Sound</h3><div class="formulas">
+      <code>v = fλ</code>
+      <code>v = √(T/μ)</code>
+      <code>f_n = nv/(2L) (string)</code>
+      <code>β = 10 log(I/I₀)</code>
+      <code>f' = f(v±v_o)/(v±v_s)</code>
+    </div></article>
+
+    <article class="concept"><h3>Electrostatics</h3><div class="formulas">
+      <code>F = k|q₁q₂|/r²</code>
+      <code>E = kq/r²</code>
+      <code>V = kq/r</code>
+      <code>U = kq₁q₂/r</code>
+      <code>C = Q/V = κε₀A/d</code>
+      <code>U_cap = ½CV²</code>
+    </div></article>
+
+    <article class="concept"><h3>Circuits</h3><div class="formulas">
+      <code>V = IR</code>
+      <code>R = ρL/A</code>
+      <code>P = IV = I²R = V²/R</code>
+      <code>V_terminal = ε − Ir</code>
+    </div></article>
+
+    <article class="concept"><h3>Magnetism</h3><div class="formulas">
+      <code>F = qvB sinθ</code>
+      <code>F = ILB sinθ</code>
+      <code>r = mv/(qB)</code>
+      <code>ε = −dΦ_B/dt</code>
+      <code>B_wire = μ₀I/(2πr)</code>
+      <code>B_solenoid = μ₀nI</code>
+    </div></article>
+
+    <article class="concept"><h3>Optics</h3><div class="formulas">
+      <code>1/f = 1/dₒ + 1/dᵢ</code>
+      <code>m = −dᵢ/dₒ</code>
+      <code>n₁ sinθ₁ = n₂ sinθ₂</code>
+      <code>d sinθ = mλ</code>
+    </div></article>
+
+    <article class="concept"><h3>Modern</h3><div class="formulas">
+      <code>E = hf = hc/λ</code>
+      <code>K_max = hf − φ</code>
+      <code>λ = h/p</code>
+      <code>E_n = −13.6 eV/n²</code>
+      <code>γ = 1/√(1−v²/c²)</code>
+      <code>E = mc²</code>
+    </div></article>
   </main>
   <footer><div class="container">HS Physics — Formulas</div></footer>
 </body>

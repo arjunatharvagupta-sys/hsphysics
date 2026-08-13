@@ -9,53 +9,77 @@
 <body>
   <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
   <nav><div class="container">
-    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html" class="active">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="oscillations.html">Oscillations</a><a href="fluids.html">Fluids</a><a href="thermo.html">Thermo</a><a href="waves.html">8. Waves</a><a href="electrostatics.html" class="active">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
   </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Electrostatics</h2>
-      <p>Electric charge at rest — forces, fields, potential, and energy.</p>
+      <p>Charge, Coulomb’s law, fields, potential, energy, and conductors.</p>
     </div>
 
     <article class="concept">
       <h3>Electric Charge</h3>
-      <div class="explain" data-levels='["Charge is a basic property of particles. Two kinds: positive and negative. Same kinds push apart; opposite kinds pull together.","Charge is quantized in units of e = 1.60 × 10⁻¹⁹ C and is conserved. Conductors allow free charge motion; insulators do not. Charging methods: friction, conduction, induction.","Electric charge is a conserved Lorentz scalar. The elementary charge is a fundamental constant. Macroscopic densities are continuous approximations to large numbers of elementary charges."]'>
+      <div class="explain" data-levels='["Two kinds of charge: positive and negative. Like charges repel; opposite charges attract. Charge is conserved — it can move but not appear from nowhere.","Charge is quantized: e = 1.60 × 10⁻¹⁹ C. Conserved in all processes. Conductors allow free electron motion; insulators do not. Charging by friction, conduction, or induction.","Charge is a conserved Lorentz scalar. Quantization and conservation are experimental facts underpinning classical and quantum electrodynamics. Continuity equation ∂ρ/∂t + ∇·J = 0 expresses local conservation."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
+      <div class="formulas"><code>e = 1.60 × 10⁻¹⁹ C</code></div>
+      <div class="note"><h4>Induction tip</h4><p>Bring a charged object near a conductor → charges separate. Ground the conductor → opposite charge flows away (or toward). Remove ground, then remove the charged object → conductor is left charged opposite to the inducer.</p></div>
     </article>
 
     <article class="concept">
       <h3>Coulomb’s Law</h3>
-      <div class="explain" data-levels='["The electric force between two charges grows with the size of the charges and shrinks with the square of the distance between them.","F = k |q₁q₂| / r² with k = 9.0 × 10⁹ N·m²/C². Direction is along the line joining the charges: attractive for opposite signs, repulsive for like signs.","Coulomb’s law gives the electrostatic force between point charges in free space: F = (1/(4πε₀)) q₁q₂ r̂ / r². It is an inverse-square central conservative force."]'>
+      <div class="explain" data-levels='["Force between point charges grows with charge size and shrinks with distance squared. Direction is along the line joining them.","F = k|q₁q₂|/r² with k = 9.0 × 10⁹ N·m²/C². Vector form: use unit vectors or components. Superposition: net force is the vector sum of individual forces.","Coulomb’s law is the electrostatic force in free space. Superposition follows from linearity of Maxwell’s equations. In a medium, replace ε₀ by ε = κε₀."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>F = k |q₁q₂| / r²</code>
+        <code>F = k|q₁q₂|/r²</code>
         <code>k = 9.0 × 10⁹ N·m²/C²</code>
       </div>
+      <div class="mistakes"><h4>Common mistake</h4><p>Forgetting that force is a vector. Two forces of equal magnitude at an angle do not simply add numerically — resolve into components.</p></div>
     </article>
 
     <article class="concept">
       <h3>Electric Field</h3>
-      <div class="explain" data-levels='["An electric field is the invisible influence a charge creates around itself. Another charge placed in that field feels a force. Field lines show the direction a positive test charge would be pushed.","E = F/q₀. For a point charge E = kq/r². Field lines begin on positive charges and end on negative ones; density indicates strength.","The electric field is force per unit charge in the limit of a vanishing test charge. It satisfies ∇·E = ρ/ε₀ and ∇×E = 0 in electrostatics."]'>
+      <div class="explain" data-levels='["The field is the influence a charge creates in space. Another charge feels F = qE. Field lines point the way a positive test charge would be pushed.","E = F/q₀. Point charge: E = kq/r². Superposition applies. Uniform field between large parallel plates (approx). Lines start on + and end on −; density indicates strength.","E is force per unit charge in the limit q₀ → 0. Electrostatics: ∇·E = ρ/ε₀, ∇×E = 0. Field of a point charge is E = (1/(4πε₀)) q r̂/r²."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>E = F / q</code>
-        <code>E = kq / r²</code>
+        <code>E = F/q</code>
+        <code>E = kq/r² &nbsp;&nbsp; (point charge)</code>
+      </div>
+      <div class="note"><h4>Tip</h4><p>E is independent of the test charge. Direction is defined via a positive test charge. Negative charges feel force opposite to E.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Electric Potential</h3>
+      <div class="explain" data-levels='["Potential is like height for gravity. High potential is “uphill” for positive charges. Potential difference is the work per charge to move a test charge between two points.","V = U/q. Point charge: V = kq/r (V = 0 at infinity). Uniform field: ΔV = Ed. Equipotential surfaces are perpendicular to field lines; no work to move along an equipotential.","E = −∇V. Potential is defined up to a constant. For point charges V = Σ kqᵢ/rᵢ. Conductors are equipotentials in electrostatics; excess charge resides on the surface."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>V = kq/r</code>
+        <code>ΔV = Ed &nbsp;&nbsp; (uniform)</code>
+        <code>U = qV = kq₁q₂/r</code>
       </div>
     </article>
 
     <article class="concept">
-      <h3>Potential and Potential Energy</h3>
-      <div class="explain" data-levels='["Electric potential is like height for gravity — it tells how much energy a charge would have if placed there. Moving a charge against the field stores potential energy.","Potential difference V = ΔU/q. For a point charge V = kq/r. PE of two point charges U = kq₁q₂/r. In a uniform field ΔV = Ed.","Electric potential is the scalar whose negative gradient is the electric field: E = −∇V. Only differences are measurable. Potential energy of a configuration is (1/2)Σ qᵢVᵢ."]'>
+      <h3>Conductors in Electrostatics</h3>
+      <div class="explain" data-levels='["Inside a conductor in equilibrium, charges have finished moving. The electric field inside the conducting material is zero, and the whole conductor is at one potential.","E = 0 inside conducting material. Excess charge on the surface. Field just outside a surface is σ/ε₀ perpendicular to the surface. Cavities: if no charge inside, E = 0 in empty cavity (shielding).","Electrostatic equilibrium: E = 0 in the bulk, conductor is an equipotential, charge density related to the discontinuity of the normal component of E. Faraday cage: external fields do not penetrate a hollow conductor."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="note"><h4>Exam tip</h4><p>E = 0 inside the metal, not necessarily inside a hollow cavity if charge is enclosed. External static fields are shielded from the interior of a conducting shell.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Capacitance (Brief)</h3>
+      <div class="explain" data-levels='["A capacitor stores charge and energy. Capacitance measures how much charge it holds per volt.","C = Q/V. Parallel-plate: C = κε₀A/d. Energy stored U = ½CV² = ½QV = Q²/(2C). Series: 1/C_eq = Σ(1/C). Parallel: C_eq = ΣC.","Capacitance is the coefficient relating charge to potential for a conductor configuration. Energy density in the field is (1/2)ε₀E². Dielectrics increase C by reducing the effective field for a given free charge."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
-        <code>V = kq / r</code>
-        <code>U = kq₁q₂ / r</code>
-        <code>ΔV = Ed</code>
+        <code>C = Q/V</code>
+        <code>C = κε₀A/d</code>
+        <code>U = ½CV²</code>
       </div>
     </article>
   </main>
