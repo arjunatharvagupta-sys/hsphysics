@@ -3,122 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>12. Optics | HS Physics</title>
+  <title>Optics | HS Physics</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>HS Physics</h1>
-      <p class="tagline">Full-Year High School Physics Companion</p>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="../index.html">Home</a>
-      <a href="measurement.html">1. Measurement</a>
-      <a href="kinematics.html">2. Kinematics</a>
-      <a href="dynamics.html">3. Dynamics</a>
-      <a href="energy.html">4. Energy</a>
-      <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular & Gravity</a>
-      <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves & Sound</a>
-      <a href="electrostatics.html">9. Electrostatics</a>
-      <a href="circuits.html">10. Circuits</a>
-      <a href="magnetism.html">11. Magnetism</a>
-      <a href="optics.html" class="active">12. Optics</a>
-      <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formula Sheet</a>
-    </div>
-  </nav>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html" class="active">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+  </div></nav>
 
   <main class="container">
     <div class="unit-header">
-      <h2>12 — Optics</h2>
-      <p>Geometric optics (mirrors & lenses) and wave optics (interference & diffraction).</p>
+      <h2>Optics</h2>
+      <p>Geometric optics (mirrors and lenses) and wave optics (interference and diffraction).</p>
     </div>
 
     <article class="concept">
-      <h3>Reflection & Mirrors</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Light bounces off a mirror so that the angle it hits equals the angle it leaves. Curved mirrors can focus light or make images that look bigger or smaller.</p>
+      <h3>Reflection and Mirrors</h3>
+      <div class="explain" data-levels='["Light bounces off a mirror so the angle it hits equals the angle it leaves. Curved mirrors can focus light or make images look bigger or smaller.","Law of reflection: θᵢ = θᵣ. Plane mirrors form virtual, upright, same-size images. Spherical mirrors obey 1/f = 1/dₒ + 1/dᵢ.","The law of reflection follows from Fermat’s principle. The mirror equation is the paraxial approximation to a spherical reflecting surface."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Law of reflection: θᵢ = θᵣ. Plane mirrors form virtual, upright, same-size images. Spherical mirrors: 1/f = 1/dₒ + 1/dᵢ. Concave mirrors can form real or virtual images; convex always virtual.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>The law of reflection follows from Fermat’s principle (stationary optical path). The mirror equation is the paraxial approximation to the exact spherical reflecting surface. Sign conventions must be applied consistently for object and image distances and focal length.</p>
-      </div>
-
       <div class="formulas">
         <code>θᵢ = θᵣ</code>
         <code>1/f = 1/dₒ + 1/dᵢ</code>
-        <code>m = −dᵢ / dₒ</code>
       </div>
     </article>
 
     <article class="concept">
-      <h3>Refraction & Lenses</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Light bends when it enters a different material (water, glass) because it changes speed. Lenses use this bending to focus light and form images.</p>
+      <h3>Refraction and Lenses</h3>
+      <div class="explain" data-levels='["Light bends when it enters a different material because it changes speed. Lenses use this bending to focus light and form images.","Snell’s law: n₁ sinθ₁ = n₂ sinθ₂. Index n = c/v. Thin-lens equation is identical in form to the mirror equation.","Snell’s law follows from phase matching at an interface. The thin-lens equation is the first-order result for a lens of negligible thickness."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Snell’s law: n₁ sinθ₁ = n₂ sinθ₂. Index of refraction n = c/v. Thin-lens equation is identical in form to the mirror equation. Converging lenses can form real or virtual images; diverging lenses form only virtual images.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Snell’s law is the boundary condition that follows from phase matching (or equivalently from Fermat’s principle) at an interface. The thin-lens equation is the first-order (paraxial) result for a lens of negligible thickness. Real systems require additional terms for spherical aberration, coma, and chromatic aberration.</p>
-      </div>
-
       <div class="formulas">
         <code>n₁ sinθ₁ = n₂ sinθ₂</code>
-        <code>n = c / v</code>
         <code>1/f = 1/dₒ + 1/dᵢ</code>
       </div>
     </article>
 
     <article class="concept">
-      <h3>Interference & Diffraction</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Light can cancel itself or reinforce itself when two waves meet (interference). It also spreads out when it goes through a narrow opening (diffraction). These effects prove light is a wave.</p>
+      <h3>Interference and Diffraction</h3>
+      <div class="explain" data-levels='["Light can cancel itself or reinforce itself when two waves meet. It also spreads when it passes through a narrow opening. These effects prove light is a wave.","Double-slit constructive interference: d sinθ = mλ. Single-slit diffraction minimum: a sinθ = mλ. Diffraction gratings produce sharp bright fringes.","Interference is linear superposition of coherent waves. Far-field diffraction is the Fourier transform of the aperture function."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Double-slit: constructive interference when d sinθ = mλ. Single-slit diffraction minimum: a sinθ = mλ. Diffraction grating: d sinθ = mλ produces sharp bright fringes. Thin-film interference depends on path difference and phase changes upon reflection.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Interference is the linear superposition of coherent electromagnetic waves. Young’s double-slit pattern is the Fourier transform of two delta-function apertures. Diffraction in the far field is the Fourier transform of the aperture function. The intensity pattern for a grating of N slits becomes sharper as N increases, approaching a set of discrete diffraction orders.</p>
-      </div>
-
       <div class="formulas">
-        <code>Double slit: d sinθ = mλ</code>
-        <code>Single slit min: a sinθ = mλ</code>
+        <code>d sinθ = mλ</code>
+        <code>a sinθ = mλ</code>
       </div>
     </article>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>HS Physics Year Companion — Unit 12</p>
-    </div>
-  </footer>
+  <footer><div class="container">HS Physics — Optics</div></footer>
+  <script src="../js/explain.js"></script>
 </body>
 </html>

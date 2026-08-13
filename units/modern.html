@@ -3,61 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>13. Modern Physics | HS Physics</title>
+  <title>Modern Physics | HS Physics</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>HS Physics</h1>
-      <p class="tagline">Full-Year High School Physics Companion</p>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="../index.html">Home</a>
-      <a href="measurement.html">1. Measurement</a>
-      <a href="kinematics.html">2. Kinematics</a>
-      <a href="dynamics.html">3. Dynamics</a>
-      <a href="energy.html">4. Energy</a>
-      <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular & Gravity</a>
-      <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves & Sound</a>
-      <a href="electrostatics.html">9. Electrostatics</a>
-      <a href="circuits.html">10. Circuits</a>
-      <a href="magnetism.html">11. Magnetism</a>
-      <a href="optics.html">12. Optics</a>
-      <a href="modern.html" class="active">13. Modern</a>
-      <a href="../formulas.html">Formula Sheet</a>
-    </div>
-  </nav>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html" class="active">13. Modern</a><a href="../formulas.html">Formulas</a>
+  </div></nav>
 
   <main class="container">
     <div class="unit-header">
-      <h2>13 — Modern Physics</h2>
-      <p>Brief introduction to the 20th-century ideas that changed physics: relativity, photons, and atoms.</p>
+      <h2>Modern Physics</h2>
+      <p>Relativity, photons, and the quantum atom — the ideas that reshaped physics in the twentieth century.</p>
     </div>
 
     <article class="concept">
-      <h3>Special Relativity (Basics)</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Nothing can go faster than light. When things move very fast, time slows down for them and lengths shrink — but only from the point of view of someone watching from outside.</p>
+      <h3>Special Relativity</h3>
+      <div class="explain" data-levels='["Nothing can go faster than light. When things move very fast, time slows down for them and lengths shrink — but only from the viewpoint of someone watching from outside.","Two postulates: laws of physics are the same in all inertial frames, and c is the same for all observers. Consequences: time dilation Δt = γΔt₀, length contraction L = L₀/γ, with γ = 1/√(1−v²/c²). Also E = mc².","Special relativity is the geometry of Minkowski spacetime. Lorentz transformations leave the interval ds² invariant. Energy–momentum four-vector yields E² = (pc)² + (mc²)²."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Two postulates: (1) laws of physics are the same in all inertial frames, (2) speed of light c is the same for all observers. Consequences: time dilation Δt = γ Δt₀, length contraction L = L₀/γ, where γ = 1/√(1−v²/c²). Mass–energy equivalence: E = mc².</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Special relativity is the geometry of Minkowski spacetime. The Lorentz transformations leave the interval ds² = −c²dt² + dx² + dy² + dz² invariant. Time dilation and length contraction are direct consequences of that invariance. The energy–momentum four-vector yields E² = (pc)² + (mc²)² and the rest energy mc².</p>
-      </div>
-
       <div class="formulas">
         <code>γ = 1 / √(1 − v²/c²)</code>
         <code>Δt = γ Δt₀</code>
@@ -66,23 +31,10 @@
     </article>
 
     <article class="concept">
-      <h3>Photons & Photoelectric Effect</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Light comes in tiny packets called photons. Each photon carries a fixed amount of energy that depends only on its color (frequency). That is why some colors of light can knock electrons out of metal while others cannot, no matter how bright they are.</p>
+      <h3>Photons and the Photoelectric Effect</h3>
+      <div class="explain" data-levels='["Light comes in tiny packets called photons. Each photon carries a fixed energy that depends only on its color. That is why some colors can knock electrons out of metal while others cannot, no matter how bright.","Photon energy E = hf = hc/λ. Electrons are emitted only if f > threshold. K_max = hf − φ. Intensity affects number of electrons, not their individual energies.","Einstein’s photon hypothesis treats light as quanta of energy hf. The work function is the minimum energy to liberate an electron. The linear K_max-versus-frequency relation measures Planck’s constant."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Photon energy E = hf = hc/λ. Photoelectric effect: electrons are emitted only if f > f₀ (threshold). Kinetic energy of electrons K_max = hf − φ, where φ is the work function. Intensity affects number of electrons, not their individual energies.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Einstein’s photon hypothesis explains the photoelectric effect by treating light as quanta of energy hf. The work function is the minimum energy needed to liberate an electron from the metal surface. The linear relation between K_max and frequency yields a direct measurement of Planck’s constant.</p>
-      </div>
-
       <div class="formulas">
         <code>E = hf = hc / λ</code>
         <code>K_max = hf − φ</code>
@@ -90,35 +42,17 @@
     </article>
 
     <article class="concept">
-      <h3>Wave–Particle Duality & Bohr Model</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Tiny particles like electrons can act like waves. Atoms have only certain allowed energy levels — electrons can jump between them by absorbing or emitting a photon of exactly the right energy.</p>
+      <h3>Wave–Particle Duality and Bohr Model</h3>
+      <div class="explain" data-levels='["Tiny particles like electrons can act like waves. Atoms have only certain allowed energy levels — electrons jump between them by absorbing or emitting a photon of exactly the right energy.","de Broglie wavelength λ = h/p. Bohr model: quantized orbits; hydrogen levels E_n = −13.6 eV / n². Photons emitted or absorbed when electrons change levels: ΔE = hf.","de Broglie’s relation λ = h/p unifies wave and particle aspects of matter. The Bohr model was a semi-classical precursor that correctly predicted the hydrogen spectrum. Full quantum mechanics replaces orbits with stationary-state wave functions."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>de Broglie wavelength λ = h/p. Bohr model: electrons orbit in quantized angular-momentum states; energy levels E_n = −13.6 eV / n² for hydrogen. Photons are emitted or absorbed when electrons change levels: ΔE = hf.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>de Broglie’s relation λ = h/p unifies the wave and particle aspects of matter. The Bohr model was a semi-classical precursor to quantum mechanics that correctly predicted the hydrogen spectrum by quantizing angular momentum. Full quantum mechanics replaces orbits with stationary-state wave functions and energy eigenvalues of the Schrödinger equation.</p>
-      </div>
-
       <div class="formulas">
         <code>λ = h / p</code>
-        <code>E_n = −13.6 eV / n²  (hydrogen)</code>
-        <code>ΔE = hf</code>
+        <code>E_n = −13.6 eV / n²</code>
       </div>
     </article>
   </main>
-
-  <footer>
-    <div class="container">
-      <p>HS Physics Year Companion — Unit 13</p>
-    </div>
-  </footer>
+  <footer><div class="container">HS Physics — Modern Physics</div></footer>
+  <script src="../js/explain.js"></script>
 </body>
 </html>
