@@ -1,26 +1,34 @@
 # HS Physics Year Companion
 
-A thorough, full-year high school physics website.
+A complete, thorough full-year high school physics website.
+
+**Repo:** https://github.com/arjunatharvagupta-sys/hsphysics
 
 ## Features
 - Every major concept explained three ways:
   - **ELI5** — simple everyday language
   - **High School** — classroom / test-ready language
   - **Professional** — precise formal language
-- Interactive coded simulations
+- Interactive coded simulations (kinematics, forces, waves)
 - Worked examples and common mistakes
-- Formula sheet
+- Complete formula sheet
 
-## Units
-1. Measurement & Uncertainty
-2. Kinematics
-3. Dynamics & Newton’s Laws
-4. Work, Energy, Power
-5. Momentum & Collisions
-6. Circular Motion & Gravity
-7–13. (Coming next: Rotation, Waves, Electrostatics, Circuits, Magnetism, Optics, Modern)
+## Units (All 13 Complete)
+1. Measurement & Uncertainty  
+2. Kinematics  
+3. Dynamics & Newton’s Laws  
+4. Work, Energy, Power  
+5. Momentum & Collisions  
+6. Circular Motion & Gravity  
+7. Rotational Motion  
+8. Waves & Sound  
+9. Electrostatics  
+10. Electric Circuits  
+11. Magnetism  
+12. Optics  
+13. Modern Physics  
 
-## Live Site
-Open `index.html` or view on GitHub Pages once enabled.
+## How to View
+Open `index.html` locally or enable GitHub Pages on the `main` branch.
 
 Built as a complete year-long learning partner.
