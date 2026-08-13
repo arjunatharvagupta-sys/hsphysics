@@ -7,87 +7,103 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>HS Physics</h1>
-      <p class="tagline">Full-year high school physics companion</p>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="../index.html">Home</a>
-      <a href="measurement.html">1. Measurement</a>
-      <a href="kinematics.html">2. Kinematics</a>
-      <a href="dynamics.html" class="active">3. Dynamics</a>
-      <a href="energy.html">4. Energy</a>
-      <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular</a>
-      <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves</a>
-      <a href="electrostatics.html">9. Electrostatics</a>
-      <a href="circuits.html">10. Circuits</a>
-      <a href="magnetism.html">11. Magnetism</a>
-      <a href="optics.html">12. Optics</a>
-      <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formulas</a>
-    </div>
-  </nav>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a><a href="measurement.html">1. Measurement</a><a href="kinematics.html">2. Kinematics</a><a href="dynamics.html" class="active">3. Dynamics</a><a href="energy.html">4. Energy</a><a href="momentum.html">5. Momentum</a><a href="circular.html">6. Circular</a><a href="rotation.html">7. Rotation</a><a href="waves.html">8. Waves</a><a href="electrostatics.html">9. Electrostatics</a><a href="circuits.html">10. Circuits</a><a href="magnetism.html">11. Magnetism</a><a href="optics.html">12. Optics</a><a href="modern.html">13. Modern</a><a href="../formulas.html">Formulas</a>
+  </div></nav>
 
   <main class="container">
     <div class="unit-header">
       <h2>Dynamics & Newton’s Laws</h2>
-      <p>What causes motion to change — forces, free-body diagrams, and the three laws that govern classical mechanics.</p>
+      <p>Forces, free-body diagrams, friction, springs, systems, and the problem-solving habits that prevent most mistakes.</p>
     </div>
 
     <article class="concept">
-      <h3>Force</h3>
-      <div class="explain" data-levels='["A force is a push or a pull. It can make something start moving, stop, speed up, slow down, or change direction.","Force is a vector measured in newtons (1 N = 1 kg·m/s²). Common forces include weight (mg), normal force, friction, tension, applied force, and spring force. Net force is the vector sum of all forces on an object.","In Newtonian mechanics a force is any interaction capable of producing an acceleration of a mass. It is a vector in three-dimensional space. The SI unit is the newton, defined through F = ma."]'>
+      <h3>Force and Net Force</h3>
+      <div class="explain" data-levels='["A force is a push or a pull. Net force is what you get when you add all the pushes and pulls together as vectors.","Force is a vector in newtons (1 N = 1 kg·m/s²). Net force ΣF is the vector sum of every force on the object. Only net force appears in ΣF = ma.","Force is any interaction that can change the momentum of a mass. Net force is the resultant of all external forces; internal forces cancel in pairs by Newton’s third law when the system is chosen appropriately."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
     </article>
 
     <article class="concept">
-      <h3>Newton’s First Law</h3>
-      <div class="explain" data-levels='["Things keep doing what they are already doing. Sitting still stays still. Moving in a straight line at constant speed keeps doing that — unless a net force acts.","An object at rest remains at rest, and an object in motion continues in uniform straight-line motion, unless acted on by a net external force. This is the law of inertia. Mass measures inertia.","In an inertial frame the momentum of a body remains constant if the net external force is zero. Equivalently, acceleration vanishes when ΣF = 0. The law defines inertial frames and identifies mass as the quantitative measure of resistance to changes in velocity."]'>
+      <h3>Newton’s First Law (Inertia)</h3>
+      <div class="explain" data-levels='["Things keep doing what they already do. Still stays still; moving in a straight line at constant speed keeps doing that — unless a net force acts.","An object at rest stays at rest; an object in motion continues in uniform straight-line motion unless a net external force acts. Mass measures inertia.","In an inertial frame, momentum is constant when ΣF_ext = 0. The first law defines the class of inertial frames and identifies mass as resistance to acceleration."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
+      <div class="mistakes"><h4>Common misconception</h4><p>“A force is needed to keep something moving.” Everyday friction hides the truth. In the absence of net force, motion continues forever at constant velocity.</p></div>
     </article>
 
     <article class="concept">
       <h3>Newton’s Second Law</h3>
-      <div class="explain" data-levels='["The harder you push, the faster the speed changes. The heavier the object, the less it accelerates for the same push. Force equals mass times acceleration.","ΣF = ma. Net force equals mass times acceleration. Acceleration points in the direction of the net force. After drawing a free-body diagram, write component equations and solve.","The second law states that the time rate of change of momentum equals the net external force: ΣF = dp/dt. For constant mass this reduces to ΣF = ma. In an inertial Cartesian frame it supplies three independent scalar equations once the forces are known."]'>
+      <div class="explain" data-levels='["Harder push → more acceleration. More mass → less acceleration for the same push. Net force equals mass times acceleration.","ΣF = ma. Acceleration is always in the direction of net force. Draw a free-body diagram, resolve into components, write ΣFₓ = maₓ and ΣFᵧ = maᵧ, then solve.","ΣF = dp/dt. For constant mass this is ΣF = ma. Component equations in an inertial frame completely determine the motion once forces are specified as functions of position, velocity, and time."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>ΣF = ma</code>
         <code>ΣFₓ = maₓ &nbsp;&nbsp; ΣFᵧ = maᵧ</code>
       </div>
+      <div class="note"><h4>Non-negotiable habit</h4><p>Draw a free-body diagram before writing any equation. Isolate the object, draw every force, label magnitudes and directions, then write Newton’s second law.</p></div>
     </article>
 
     <article class="concept">
       <h3>Newton’s Third Law</h3>
-      <div class="explain" data-levels='["Whenever you push on something, it pushes back on you with exactly the same strength in the opposite direction. Forces always come in pairs.","For every action force there is an equal and opposite reaction force. The two forces act on different objects, so they never cancel on a free-body diagram of a single object.","If body A exerts force F on body B, then body B exerts −F on body A. The forces are simultaneous, equal in magnitude, opposite in direction, and collinear. They act on different bodies and therefore do not cancel in either body’s equation of motion."]'>
+      <div class="explain" data-levels='["When you push something, it pushes back with equal strength in the opposite direction. Forces always come in pairs on two different objects.","Action-reaction pairs are equal, opposite, and act on different objects. They never cancel on a single free-body diagram. If A pushes B, B pushes A.","If A exerts F on B, then B exerts −F on A. The forces are simultaneous and collinear. They cancel only when both bodies are included in the same system."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
+      <div class="mistakes"><h4>Common mistake</h4><p>Canceling action-reaction pairs on one free-body diagram. Those two forces act on different objects; only forces on the chosen object belong on its diagram.</p></div>
     </article>
 
     <article class="concept">
-      <h3>Free-Body Diagrams and Weight</h3>
-      <div class="explain" data-levels='["A free-body diagram shows only the object you care about and every push or pull on it as arrows. Weight is the pull of gravity — always downward and equal to mass times g.","A free-body diagram isolates one object and represents every force on it as a vector. Weight W = mg acts at the center of mass toward Earth’s center. The normal force is perpendicular to the surface. Tension acts along a string away from the object.","A free-body diagram is the graphical isolation of a system for Newton’s second law. All external forces are drawn as localized vectors. Weight is the gravitational force mg in the uniform-field approximation."]'>
+      <h3>Weight, Normal Force, Tension</h3>
+      <div class="explain" data-levels='["Weight is the pull of gravity (mg, downward). Normal force is the push from a surface, perpendicular to the surface. Tension is the pull from a rope or string, along the rope away from the object.","W = mg at the center of mass. Normal force N is perpendicular to the contact surface and adjusts to whatever value prevents the object from sinking into the surface (within material limits). Tension is uniform in a massless string.","Weight is the gravitational force in the uniform-field approximation. The normal force is the contact force perpendicular to the surface; its magnitude is determined by the dynamics (or statics) of the problem. Ideal strings transmit tension undiminished and only in tension."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas"><code>W = mg</code></div>
+      <div class="mistakes"><h4>Common mistake</h4><p>Assuming N = mg always. On an incline N = mg cosθ. In an elevator N can be larger or smaller than mg. N is not “the reaction to weight”; it is determined by the surface constraint.</p></div>
     </article>
 
     <article class="concept">
       <h3>Friction</h3>
-      <div class="explain" data-levels='["Friction tries to stop sliding. Static friction holds an object still until you push hard enough; kinetic friction slows it once it is already moving.","Static friction satisfies 0 ≤ fₛ ≤ μₛN and matches the applied force up to its maximum. Kinetic friction is fₖ = μₖN once sliding begins. Both oppose relative motion (or attempted motion) at the contact surface.","The Coulomb model approximates dry friction: |fₛ| ≤ μₛN while relative acceleration is zero; kinetic friction has magnitude μₖN opposite the relative velocity. Coefficients depend on the material pair and surface conditions."]'>
+      <div class="explain" data-levels='["Friction fights sliding. Static friction holds something still until you push hard enough. Kinetic friction slows it once it is sliding.","Static: 0 ≤ fₛ ≤ μₛN; it matches the applied force up to μₛN. Kinetic: fₖ = μₖN, direction opposite relative velocity. Both act parallel to the surface.","Coulomb model: |fₛ| ≤ μₛN while relative acceleration is zero; kinetic friction has magnitude μₖN opposite slip velocity. Coefficients depend on the material pair; the model neglects velocity dependence and deformation."]'>
         <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
       <div class="formulas">
         <code>fₛ ≤ μₛ N</code>
         <code>fₖ = μₖ N</code>
+      </div>
+      <div class="note"><h4>Tip</h4><p>Static friction can be anything from zero up to its maximum. Do not automatically set fₛ = μₛN unless the object is on the verge of slipping or the problem states that it is.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Spring Force (Hooke’s Law)</h3>
+      <div class="explain" data-levels='["A spring pulls back when stretched and pushes back when compressed. The harder you stretch or compress it, the stronger the push or pull (within limits).","F_s = −kx, where x is displacement from equilibrium and k is the spring constant. The minus sign means the force is restoring — opposite the displacement.","Hooke’s law is the linear approximation to the force from a small deformation of an elastic body. The potential energy stored is ½kx². Real springs become nonlinear at large amplitudes and can permanently deform."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="formulas">
+        <code>F_s = −kx</code>
+        <code>PE_s = ½kx²</code>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Systems and Center of Mass</h3>
+      <div class="explain" data-levels='["Sometimes it helps to treat several objects as one system. The center of mass is the average position weighted by mass — the point that moves as if all external forces acted there.","For a system, only external forces affect the motion of the center of mass: ΣF_ext = M a_cm. Internal forces cancel in pairs. Choosing the system wisely can eliminate unknown internal forces from the equations.","The center of mass is defined by R_cm = (1/M) Σ mᵢ rᵢ. Newton’s second law for the system reduces to M a_cm = ΣF_ext. This is the foundation of the separation between center-of-mass motion and relative motion."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="note"><h4>Strategy</h4><p>If two objects interact (string, contact force) and you do not need that force, put both in one system so the internal forces cancel. If you need the force, isolate one object.</p></div>
+    </article>
+
+    <article class="concept">
+      <h3>Problem-Solving Checklist</h3>
+      <div class="note">
+        <h4>Every mechanics problem</h4>
+        <p>1. Read fully; note keywords (constant speed, frictionless, at rest, maximum).
+2. Sketch and choose a positive direction / coordinate system.
+3. Draw a free-body diagram for each object you will analyze.
+4. Resolve forces into components.
+5. Write ΣF = ma (or ΣF = 0 for equilibrium).
+6. Solve symbolically, then substitute numbers with units.
+7. Check units, sign, and whether the magnitude is reasonable.</p>
       </div>
     </article>
 
@@ -101,59 +117,20 @@
           <label>Force <input type="range" id="force" min="0" max="50" value="20" step="1"> <span id="forceval">20</span></label>
           <button id="forceStart">Start</button>
         </div>
-        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">
-          a = <span id="aRead">4.00</span> m/s² &nbsp;·&nbsp; v = <span id="vRead">0.00</span> m/s
-        </p>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">a = <span id="aRead">4.00</span> m/s² · v = <span id="vRead">0.00</span> m/s</p>
       </div>
     </article>
   </main>
-
   <footer><div class="container">HS Physics — Dynamics</div></footer>
   <script src="../js/explain.js"></script>
   <script>
-    const canvas = document.getElementById('forceCanvas');
-    const ctx = canvas.getContext('2d');
-    const massSl = document.getElementById('mass');
-    const forceSl = document.getElementById('force');
-    let x = 30, v = 0, running = false, animId;
-    const dt = 0.02;
-
-    function draw() {
-      ctx.fillStyle = '#080c10';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.strokeStyle = '#243040';
-      ctx.beginPath(); ctx.moveTo(0, 120); ctx.lineTo(canvas.width, 120); ctx.stroke();
-      const m = parseFloat(massSl.value);
-      const size = 18 + m * 1.8;
-      ctx.fillStyle = '#5eb8f0';
-      ctx.fillRect(x, 120 - size, size, size);
-      const F = parseFloat(forceSl.value);
-      ctx.strokeStyle = '#81c784';
-      ctx.beginPath();
-      ctx.moveTo(x + size, 120 - size/2);
-      ctx.lineTo(x + size + F * 1.8, 120 - size/2);
-      ctx.stroke();
-    }
-
-    function step() {
-      if (!running) return;
-      const a = parseFloat(forceSl.value) / parseFloat(massSl.value);
-      v += a * dt; x += v * dt;
-      document.getElementById('aRead').textContent = a.toFixed(2);
-      document.getElementById('vRead').textContent = v.toFixed(2);
-      if (x > canvas.width - 40) { running = false; return; }
-      draw(); animId = requestAnimationFrame(step);
-    }
-
-    function reset() {
-      if (animId) cancelAnimationFrame(animId);
-      x = 30; v = 0; running = true; draw(); step();
-    }
-
-    massSl.oninput = () => document.getElementById('massval').textContent = massSl.value;
-    forceSl.oninput = () => document.getElementById('forceval').textContent = forceSl.value;
-    document.getElementById('forceStart').onclick = reset;
-    draw();
+    const canvas=document.getElementById('forceCanvas'),ctx=canvas.getContext('2d');
+    const massSl=document.getElementById('mass'),forceSl=document.getElementById('force');
+    let x=30,v=0,running=false,animId;const dt=0.02;
+    function draw(){ctx.fillStyle='#080c10';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='#243040';ctx.beginPath();ctx.moveTo(0,120);ctx.lineTo(canvas.width,120);ctx.stroke();const m=parseFloat(massSl.value),size=18+m*1.8;ctx.fillStyle='#5eb8f0';ctx.fillRect(x,120-size,size,size);const F=parseFloat(forceSl.value);ctx.strokeStyle='#81c784';ctx.beginPath();ctx.moveTo(x+size,120-size/2);ctx.lineTo(x+size+F*1.8,120-size/2);ctx.stroke()}
+    function step(){if(!running)return;const a=parseFloat(forceSl.value)/parseFloat(massSl.value);v+=a*dt;x+=v*dt;document.getElementById('aRead').textContent=a.toFixed(2);document.getElementById('vRead').textContent=v.toFixed(2);if(x>canvas.width-40){running=false;return}draw();animId=requestAnimationFrame(step)}
+    function reset(){if(animId)cancelAnimationFrame(animId);x=30;v=0;running=true;draw();step()}
+    massSl.oninput=()=>document.getElementById('massval').textContent=massSl.value;forceSl.oninput=()=>document.getElementById('forceval').textContent=forceSl.value;document.getElementById('forceStart').onclick=reset;draw();
   </script>
 </body>
 </html>
