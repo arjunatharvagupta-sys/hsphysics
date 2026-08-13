@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4. Work, Energy, Power | HS Physics</title>
+  <title>Energy | HS Physics</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header>
     <div class="container">
       <h1>HS Physics</h1>
-      <p class="tagline">Full-Year High School Physics Companion</p>
+      <p class="tagline">Full-year high school physics companion</p>
     </div>
   </header>
 
@@ -22,66 +22,40 @@
       <a href="dynamics.html">3. Dynamics</a>
       <a href="energy.html" class="active">4. Energy</a>
       <a href="momentum.html">5. Momentum</a>
-      <a href="circular.html">6. Circular & Gravity</a>
+      <a href="circular.html">6. Circular</a>
       <a href="rotation.html">7. Rotation</a>
-      <a href="waves.html">8. Waves & Sound</a>
+      <a href="waves.html">8. Waves</a>
       <a href="electrostatics.html">9. Electrostatics</a>
       <a href="circuits.html">10. Circuits</a>
       <a href="magnetism.html">11. Magnetism</a>
       <a href="optics.html">12. Optics</a>
       <a href="modern.html">13. Modern</a>
-      <a href="../formulas.html">Formula Sheet</a>
+      <a href="../formulas.html">Formulas</a>
     </div>
   </nav>
 
   <main class="container">
     <div class="unit-header">
-      <h2>04 — Work, Energy & Power</h2>
-      <p>Energy is the capacity to do work. Work transfers energy. Power is how fast that transfer happens.</p>
+      <h2>Work, Energy & Power</h2>
+      <p>Energy is the capacity to do work. Work transfers energy. Power is the rate of that transfer.</p>
     </div>
 
     <article class="concept">
       <h3>Work</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Work is what happens when a force makes something move in the direction of that force. If you push a box and it slides, you did work. If you push and it doesn’t move, you did zero work.</p>
+      <div class="explain" data-levels='["Work happens when a force makes something move in the direction of that force. Push a box and it slides — you did work. Push and nothing moves — zero work.","Work by a constant force is W = Fd cosθ, where θ is the angle between force and displacement. Only the parallel component does work. Unit: joule (J). Work can be positive or negative.","Infinitesimal work is dW = F · dr. For a finite path the work is the line integral ∫ F · dr. When force is constant this reduces to W = F · Δr. Work is a scalar equal to the energy transferred by the force across the system boundary."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Work done by a constant force is W = F·d·cosθ, where θ is the angle between the force and the displacement. Only the component of force parallel to the motion does work. Unit: joule (J) = N·m. Work can be positive (energy added) or negative (energy removed).</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>The infinitesimal work done by a force is the scalar product dW = F · dr. For a finite displacement the work is the line integral ∫ F · dr along the path. When the force is constant this reduces to W = F · Δr = Fd cosθ. Work is a scalar and frame-dependent; it is the energy transferred by the force across the system boundary.</p>
-      </div>
-
       <div class="formulas">
         <code>W = Fd cosθ</code>
-        <code>W = ∫ F · dr  (variable force)</code>
+        <code>W = ∫ F · dr</code>
       </div>
     </article>
 
     <article class="concept">
       <h3>Kinetic Energy</h3>
-
-      <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Kinetic energy is the energy something has because it’s moving. Faster or heavier means more kinetic energy.</p>
+      <div class="explain" data-levels='["Kinetic energy is the energy something has because it is moving. Faster or heavier means more kinetic energy.","KE = ½mv². It is always positive and depends on the square of speed. The work–energy theorem states that net work equals the change in kinetic energy: W_net = ΔKE.","Kinetic energy of a particle is ½mv², obtained by integrating F = ma along the trajectory. For a system of particles it separates into center-of-mass and relative contributions."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>KE = ½mv². It is always positive and depends on the square of speed. The work–energy theorem states that the net work done on an object equals its change in kinetic energy: W_net = ΔKE.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>The kinetic energy of a particle is the scalar ½mv² derived from the work–energy theorem by integrating F = ma along the trajectory. For a system of particles the total kinetic energy separates into center-of-mass and relative contributions. It is the quadratic form associated with the metric of velocity space in classical mechanics.</p>
-      </div>
-
       <div class="formulas">
         <code>KE = ½mv²</code>
         <code>W_net = ΔKE</code>
@@ -90,22 +64,9 @@
 
     <article class="concept">
       <h3>Potential Energy</h3>
-
-           <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Potential energy is stored energy waiting to be turned into motion. A book on a high shelf has gravitational potential energy; a stretched spring has elastic potential energy.</p>
+      <div class="explain" data-levels='["Potential energy is stored energy waiting to become motion. A book on a high shelf has gravitational potential energy; a stretched spring has elastic potential energy.","Near Earth, PE_g = mgh. For a spring, PE_s = ½kx². Potential energy is defined only for conservative forces and depends on the configuration of the system.","A force is conservative if its work is path-independent (equivalently ∇ × F = 0). Then a scalar potential U exists with F = −∇U. Only differences in potential energy are physically meaningful."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Gravitational PE near Earth: PE_g = mgh (h measured from a chosen zero). Elastic PE of a spring: PE_s = ½kx². Potential energy is defined only for conservative forces and is a property of the system configuration.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>A force is conservative if its work is path-independent (equivalently, if ∇ × F = 0). For such forces a scalar potential energy function U(r) exists such that F = −∇U. The change in potential energy equals the negative of the work done by the conservative force. Absolute values of U are arbitrary; only differences are physically meaningful.</p>
-      </div>
-
       <div class="formulas">
         <code>PE_g = mgh</code>
         <code>PE_s = ½kx²</code>
@@ -114,46 +75,20 @@
 
     <article class="concept">
       <h3>Conservation of Mechanical Energy</h3>
-
-           <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>If no friction or other “lossy” forces are around, the total of kinetic plus potential energy stays the same. Energy just changes forms — up high and slow becomes low and fast.</p>
+      <div class="explain" data-levels='["If friction and other lossy forces are absent, kinetic plus potential energy stays constant. Energy just changes form — high and slow becomes low and fast.","When only conservative forces do work, mechanical energy is conserved: KEᵢ + PEᵢ = KE_f + PE_f. Non-conservative work changes mechanical energy: W_nc = ΔME.","In a closed system subject only to conservative internal forces, total mechanical energy E = T + U is a constant of the motion. Non-conservative work equals the change in mechanical energy."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>When only conservative forces do work, mechanical energy is conserved: KEᵢ + PEᵢ = KE_f + PE_f. Non-conservative work (friction, applied forces) changes the mechanical energy: W_nc = ΔME.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>In a closed system subject only to conservative internal forces, the total mechanical energy E = T + U is a constant of the motion. When non-conservative forces are present, the work they perform equals the change in mechanical energy. This is a direct integral consequence of Newton’s second law for time-independent potentials.</p>
-      </div>
-
       <div class="formulas">
-        <code>KEᵢ + PEᵢ = KE_f + PE_f &nbsp;&nbsp; (conservative)</code>
+        <code>KEᵢ + PEᵢ = KE_f + PE_f</code>
         <code>W_nc = Δ(KE + PE)</code>
       </div>
     </article>
 
     <article class="concept">
       <h3>Power</h3>
-
-           <div class="level-block eli5">
-        <h4>ELI5</h4>
-        <p>Power is how fast you do work or use energy. A powerful engine can do the same work in less time.</p>
+      <div class="explain" data-levels='["Power is how fast you do work or use energy. A more powerful engine does the same work in less time.","Average power P = W/Δt. Instantaneous power P = F·v. Unit: watt (W) = J/s.","Power is the time derivative of work: P = dW/dt. For a force acting on a moving point it is the scalar product F · v."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
       </div>
-
-      <div class="level-block hs">
-        <h4>High School</h4>
-        <p>Average power P = W/Δt = ΔE/Δt. Instantaneous power P = F·v. Unit: watt (W) = J/s.</p>
-      </div>
-
-      <div class="level-block pro">
-        <h4>Professional</h4>
-        <p>Power is the time derivative of work (or energy transfer): P = dW/dt. For a force acting on a moving point it is the scalar product F · v. It quantifies the rate of energy conversion or transfer and is a scalar.</p>
-      </div>
-
       <div class="formulas">
         <code>P = W/t</code>
         <code>P = Fv cosθ</code>
@@ -161,10 +96,7 @@
     </article>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>HS Physics Year Companion — Unit 4</p>
-    </div>
-  </footer>
+  <footer><div class="container">HS Physics — Energy</div></footer>
+  <script src="../js/explain.js"></script>
 </body>
 </html>
