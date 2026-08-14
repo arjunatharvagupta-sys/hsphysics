@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projectile Simulator | HS Physics</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a>
+    <a href="kinematics.html">2. Kinematics</a>
+    <a href="projectile-sim.html" class="active">Projectile Sim</a>
+    <a href="../formulas.html">Formulas</a>
+  </div></nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>Projectile Motion Simulator</h2>
+      <p>Adjust speed and angle. Watch the trajectory and read range, height, and flight time.</p>
+    </div>
+
+    <article class="concept">
+      <div class="sim-box">
+        <canvas id="projCanvas" width="560" height="320"></canvas>
+        <div class="controls">
+          <label>v₀ (m/s) <input type="range" id="v0" min="5" max="50" value="25" step="1"> <span id="v0val">25</span></label>
+          <label>θ (°) <input type="range" id="ang" min="5" max="85" value="45" step="1"> <span id="angval">45</span></label>
+          <button id="fireBtn">Fire</button>
+        </div>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">
+          Range = <span id="rangeR">—</span> m · Max height = <span id="maxH">—</span> m · Time = <span id="tof">—</span> s
+        </p>
+      </div>
+      <div class="formulas">
+        <code>R = (v₀² sin 2θ) / g</code>
+        <code>H = (v₀ sin θ)² / (2g)</code>
+        <code>T = 2 v₀ sin θ / g</code>
+      </div>
+    </article>
+  </main>
+  <footer><div class="container">HS Physics — Projectile Sim</div></footer>
+  <script>
+    const canvas = document.getElementById('projCanvas');
+    const ctx = canvas.getContext('2d');
+    const v0Sl = document.getElementById('v0');
+    const angSl = document.getElementById('ang');
+    const g = 9.8;
+    let animId = null;
+
+    function drawGround() {
+      ctx.fillStyle = '#080c10';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = '#243040';
+      ctx.beginPath();
+      ctx.moveTo(0, canvas.height - 30);
+      ctx.lineTo(canvas.width, canvas.height - 30);
+      ctx.stroke();
+    }
+
+    function fire() {
+      if (animId) cancelAnimationFrame(animId);
+      const v0 = parseFloat(v0Sl.value);
+      const th = parseFloat(angSl.value) * Math.PI / 180;
+      const vx = v0 * Math.cos(th);
+      const vy0 = v0 * Math.sin(th);
+      const T = 2 * vy0 / g;
+      const R = vx * T;
+      const H = (vy0 * vy0) / (2 * g);
+      document.getElementById('rangeR').textContent = R.toFixed(1);
+      document.getElementById('maxH').textContent = H.toFixed(1);
+      document.getElementById('tof').textContent = T.toFixed(2);
+
+      const scaleX = (canvas.width - 60) / Math.max(R, 1);
+      const scaleY = (canvas.height - 60) / Math.max(H * 1.2, 1);
+      const scale = Math.min(scaleX, scaleY);
+      const x0 = 30, y0 = canvas.height - 30;
+      let t = 0;
+      const trail = [];
+
+      function step() {
+        drawGround();
+        // trail
+        ctx.strokeStyle = '#5eb8f0';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        for (let i = 0; i < trail.length; i++) {
+          const p = trail[i];
+          if (i === 0) ctx.moveTo(p.x, p.y);
+          else ctx.lineTo(p.x, p.y);
+        }
+        ctx.stroke();
+
+        const x = vx * t;
+        const y = vy0 * t - 0.5 * g * t * t;
+        if (y < 0 && t > 0.05) { return; }
+        const px = x0 + x * scale;
+        const py = y0 - y * scale;
+        trail.push({x: px, y: py});
+        ctx.fillStyle = '#81c784';
+        ctx.beginPath();
+        ctx.arc(px, py, 7, 0, Math.PI * 2);
+        ctx.fill();
+        t += 0.02;
+        animId = requestAnimationFrame(step);
+      }
+      step();
+    }
+
+    v0Sl.oninput = () => document.getElementById('v0val').textContent = v0Sl.value;
+    angSl.oninput = () => document.getElementById('angval').textContent = angSl.value;
+    document.getElementById('fireBtn').onclick = fire;
+    drawGround();
+  </script>
+</body>
+</html>
