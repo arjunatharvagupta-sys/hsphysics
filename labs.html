@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Skills | HS Physics</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="index.html">Home</a>
+    <a href="units/measurement.html">Measurement</a>
+    <a href="labs.html" class="active">Labs</a>
+    <a href="study.html">Study</a>
+    <a href="formulas.html">Formulas</a>
+  </div></nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>Lab Skills & Experimental Design</h2>
+      <p>How to plan, measure, graph, and report — the skills that show up on lab practicals and FRQs.</p>
+    </div>
+
+    <article class="concept">
+      <h3>Variables</h3>
+      <div class="explain" data-levels='["Independent variable is what you change. Dependent is what you measure. Controlled variables stay the same so the test is fair.","Independent (manipulated) variable: deliberately changed. Dependent (responding): measured outcome. Controlled: held constant. A good experiment changes one independent variable at a time.","Causal inference requires isolating the independent variable. Confounding variables that covary with the independent variable threaten internal validity."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Graphs and Linearization</h3>
+      <div class="explain" data-levels='["Plot dependent on the vertical axis and independent on the horizontal. A straight line means a direct proportion (or linear relation). Slope often equals a physical constant.","Best-fit line by eye or regression — do not connect the dots. If theory says y ∝ x², plot y vs x² to get a straight line; slope gives the constant of proportionality. Intercept should match theory or reveal systematic offset.","Linearization transforms nonlinear models into linear form so slope and intercept map to parameters. Residuals diagnose model quality. Uncertainty in slope propagates from uncertainties in individual points."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+      <div class="note"><h4>Common linearizations</h4>
+        <p>Period vs √L for pendulum → slope = 2π/√g.<br>
+T² vs m for mass-spring → slope = 4π²/k.<br>
+1/dᵢ vs 1/dₒ for lenses → intercepts relate to 1/f.</p>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Uncertainty and Error Bars</h3>
+      <div class="explain" data-levels='["Every measurement has a range of doubt. Error bars show that range on a graph.","Instrument limit: often ± half the smallest division. Multiple trials: use spread or standard deviation. Percent difference compares two experimental values; percent error compares to accepted value.","Combined uncertainty for a derived quantity follows error propagation: for z = xy, (Δz/z)² ≈ (Δx/x)² + (Δy/y)² for independent random errors. Systematic errors shift the mean and are not reduced by averaging."]'>
+        <p></p><button class="hit" aria-label="Cycle explanation"></button>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Lab Report Skeleton</h3>
+      <div class="note">
+        <p>1. Purpose / question<br>
+2. Theory (equation you will test)<br>
+3. Apparatus and procedure (enough to replicate)<br>
+4. Data table with units and uncertainties<br>
+5. Graph with labels, units, best-fit line<br>
+6. Calculation of result from slope/intercept<br>
+7. Comparison to expected value; % error<br>
+8. Sources of uncertainty and improvements</p>
+      </div>
+    </article>
+
+    <article class="concept">
+      <h3>Classic HS Labs (ideas)</h3>
+      <div class="note">
+        <p>• g from free fall or pendulum<br>
+• μ from sliding block or Atwood with friction<br>
+• k from mass-spring period or static stretch<br>
+• Conservation of momentum (air track / video)<br>
+• Specific heat by calorimetry<br>
+• Resistance of a wire vs length/thickness<br>
+• Focal length of a lens<br>
+• Speed of sound from closed-tube resonance</p>
+      </div>
+    </article>
+  </main>
+  <footer><div class="container">HS Physics — Labs</div></footer>
+  <script src="js/explain.js"></script>
+</body>
+</html>

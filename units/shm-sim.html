@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHM Simulator | HS Physics</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header><div class="container"><h1>HS Physics</h1><p class="tagline">Full-year high school physics companion</p></div></header>
+  <nav><div class="container">
+    <a href="../index.html">Home</a>
+    <a href="oscillations.html">Oscillations</a>
+    <a href="shm-sim.html" class="active">SHM Sim</a>
+    <a href="../formulas.html">Formulas</a>
+  </div></nav>
+
+  <main class="container">
+    <div class="unit-header">
+      <h2>Mass–Spring SHM Simulator</h2>
+      <p>Change mass, spring constant, and amplitude. Watch position, energy, and period.</p>
+    </div>
+
+    <article class="concept">
+      <div class="sim-box">
+        <canvas id="shmCanvas" width="560" height="220"></canvas>
+        <div class="controls">
+          <label>m (kg) <input type="range" id="mass" min="0.5" max="5" value="1" step="0.1"> <span id="massval">1</span></label>
+          <label>k (N/m) <input type="range" id="k" min="5" max="80" value="20" step="1"> <span id="kval">20</span></label>
+          <label>A (m) <input type="range" id="amp" min="0.2" max="1.5" value="0.8" step="0.1"> <span id="ampval">0.8</span></label>
+        </div>
+        <p style="margin-top:0.75rem;color:var(--muted);font-size:0.88rem">
+          T = <span id="period">—</span> s · ω = <span id="omega">—</span> rad/s · x = <span id="xpos">—</span> m · KE/E = <span id="keFrac">—</span>
+        </p>
+      </div>
+      <div class="formulas">
+        <code>T = 2π √(m/k)</code>
+        <code>x = A cos(ωt)</code>
+        <code>E = ½kA²</code>
+      </div>
+    </article>
+  </main>
+  <footer><div class="container">HS Physics — SHM Sim</div></footer>
+  <script>
+    const canvas = document.getElementById('shmCanvas');
+    const ctx = canvas.getContext('2d');
+    const massSl = document.getElementById('mass');
+    const kSl = document.getElementById('k');
+    const ampSl = document.getElementById('amp');
+    let t = 0;
+
+    function draw() {
+      const m = parseFloat(massSl.value);
+      const k = parseFloat(kSl.value);
+      const A = parseFloat(ampSl.value);
+      const omega = Math.sqrt(k / m);
+      const T = 2 * Math.PI / omega;
+      const x = A * Math.cos(omega * t);
+      const v = -A * omega * Math.sin(omega * t);
+      const E = 0.5 * k * A * A;
+      const KE = 0.5 * m * v * v;
+
+      document.getElementById('period').textContent = T.toFixed(2);
+      document.getElementById('omega').textContent = omega.toFixed(2);
+      document.getElementById('xpos').textContent = x.toFixed(2);
+      document.getElementById('keFrac').textContent = (KE / E).toFixed(2);
+
+      ctx.fillStyle = '#080c10';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // equilibrium line
+      const mid = canvas.width / 2;
+      ctx.strokeStyle = '#243040';
+      ctx.beginPath();
+      ctx.moveTo(mid, 20);
+      ctx.lineTo(mid, canvas.height - 20);
+      ctx.stroke();
+
+      // spring coils
+      const wallX = 40;
+      const scale = 80;
+      const massX = mid + x * scale;
+      ctx.strokeStyle = '#5eb8f0';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      const coils = 12;
+      for (let i = 0; i <= coils; i++) {
+        const px = wallX + (massX - 25 - wallX) * (i / coils);
+        const py = canvas.height / 2 + (i % 2 === 0 ? -12 : 12);
+        if (i === 0) ctx.moveTo(px, canvas.height / 2);
+        else ctx.lineTo(px, py);
+      }
+      ctx.lineTo(massX - 25, canvas.height / 2);
+      ctx.stroke();
+
+      // mass
+      const size = 18 + m * 4;
+      ctx.fillStyle = '#81c784';
+      ctx.fillRect(massX - size / 2, canvas.height / 2 - size / 2, size, size);
+
+      // energy bars
+      const barW = 120;
+      const keH = (KE / E) * 80;
+      const peH = ((E - KE) / E) * 80;
+      ctx.fillStyle = '#5eb8f0';
+      ctx.fillRect(canvas.width - 140, canvas.height - 40 - keH, 50, keH);
+      ctx.fillStyle = '#ffb74d';
+      ctx.fillRect(canvas.width - 80, canvas.height - 40 - peH, 50, peH);
+      ctx.fillStyle = '#8899aa';
+      ctx.font = '11px sans-serif';
+      ctx.fillText('KE', canvas.width - 130, canvas.height - 25);
+      ctx.fillText('PE', canvas.width - 70, canvas.height - 25);
+
+      t += 0.025;
+      requestAnimationFrame(draw);
+    }
+
+    massSl.oninput = () => document.getElementById('massval').textContent = massSl.value;
+    kSl.oninput = () => document.getElementById('kval').textContent = kSl.value;
+    ampSl.oninput = () => document.getElementById('ampval').textContent = ampSl.value;
+    draw();
+  </script>
+</body>
+</html>
